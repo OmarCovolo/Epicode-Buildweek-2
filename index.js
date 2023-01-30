@@ -24,6 +24,8 @@
                     <h5>${card.title}</h5>
                     <p>${card.artist.name}</p>
                 </div>
+                <i id="pulsante" class="bi pause mx-2 fs-3 bi-pause-circle-fill"></i>
+    <i id="pulsante" class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
             </div>
         </a>`
 

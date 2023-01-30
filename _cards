@@ -27,9 +27,6 @@ margin-top: 15%}
     margin-top: 15%;
     margin-bottom:15%;
 word-break:break-all; }
-#pulsante{position: relative;
-top: -60%;
-left:40%;}
 
 
 @keyframes light {
