@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>playBar</title>
+  </head>
+  <body>
+    <div class="playbar text-light">
+        <div class=" d-flex justify-content-between align-items-center h-100">
+            <div class="currentlyPlaying info m-1 d-flex align-items-center">
+                <div class="mx-2">
+                    <h4 class="fw-bold m-0">Album name</h4>
+                    <h5 class="fw-light m-0 mt-1">Song Title</h5>
+                </div>
+                <div class="ms-2">
+                    <i class="bi like bi-heart"></i>
+                    <i class="bi liked bi-heart-fill text-success"></i>
+                </div>
+            </div>
+            <div class="navButtonPlay w-50 d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center">
+                    <i class="bi mx-2 bi-shuffle"></i>
+                    <i class="bi mx-2 bi-skip-start-fill"></i>
+                    <i class="bi pause mx-2 fs-3 bi-pause-circle-fill"></i>
+                    <i class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+                    <i class="bi mx-2 bi-skip-end-fill"></i>
+                    <i class="bi repeat mx-2 bi-repeat"></i>
+                    <i class="bi repeat1 mx-2 bi-repeat-1"></i>
+                </div>
+                <div class="progressBar d-flex justify-content-center align-items-center w-100"> 
+                    <h5 class="mx-2 m-0">2:17</h5>
+                    <div class="bar">
+                        <div class="barProgress bg-light m-0 z-1">
+                            <h4>⚪</h4>
+                        </div>
+                    </div>
+                    <h5 class="mx-2 m-0">4:59</h5>
+                </div>
+            </div>
+            <div class="navButtVol d-flex align-items-center">
+                <i class="bi mx-2 bi-blockquote-left"></i>
+                <i class="bi mx-2 bi-music-note-list"></i>
+                <i class="bi mx-2 bi-speaker"></i>
+                <i class="bi ms-2 bi-volume-down"></i>
+                <i class="bi ms-2 bi-volume-mute"></i>
+                <i class="bi ms-2 bi-volume-up"></i>
+                <div class="progressBar d-flex align-items-center"> 
+                    <div class="volume-container">
+                        <div class="volume-range">
+                          <div class="volume">
+                            <div class="volume-button"></div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <i class="bi mx-2 bi-arrows-angle-expand"></i>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+        let liked = document.querySelector(".liked")
+        let like = document.querySelector(".like")
+        like.onclick = () => {
+            like.style.display = 'none'
+            liked.style.display = 'block'
+        }
+        liked.onclick = () => {
+            like.style.display = 'block'
+            liked.style.display = 'none'
+        }
+        let playing = document.querySelector(".play")
+        let paused = document.querySelector(".pause")
+        playing.onclick = () => {
+            playing.style.display = 'none'
+            paused.style.display = 'block'
+        }
+        paused.onclick = () => {
+            playing.style.display = 'block'
+            paused.style.display = 'none'
+        }
+
+        let rep = document.querySelector(".repeat")
+        let rep1 = document.querySelector(".repeat1")
+        rep.onclick = () => {
+            rep.style.display = 'none'
+            rep1.style.display = 'block'
+            rep1.style.color = 'green'
+        }
+        rep1.onclick = () => {
+            rep.style.display = 'block'
+            rep1.style.display = 'none'
+        }
+
+        const volume = document.querySelector('.volume');
+        const volumeRange = document.querySelector('.volume-range');
+        const volumeContainer = document.querySelector('.volume-container');
+        const volumeBtn = document.querySelector('.volume-button');
+
+        const volumeRangeWidth = volumeRange.getBoundingClientRect().width;
+
+        let mouseIsDown = false;
+
+        window.addEventListener("mouseup", up);
+        volumeContainer.addEventListener("mousedown", down);
+        volumeContainer.addEventListener("mousedown", volumeSlide);
+        volumeContainer.addEventListener("mousemove", volumeSlide);
+
+        function down() {
+          mouseIsDown = true;
+        }
+
+        function up() {
+          mouseIsDown = false;
+          firstClick = true;
+        }
+
+
+        let firstClick = true; // this doesn't work
+        function volumeSlide(event) {
+          if (mouseIsDown && !firstClick) {
+            let x = Math.floor(event.offsetX );
+            if (x < 0) x = 0; // check if it's too low
+            if (x > volumeRangeWidth) x = volumeRangeWidth; // check if it's too high
+            volume.style.width = (x + 10) + 'px';
+          }
+          //  "firstClick" ignores the offset on the first click as it gives the offset of the volume button
+          firstClick = false;
+        }
+
+        
+
+    </script>
+  </body>
+</html>
