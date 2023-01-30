@@ -31,36 +31,44 @@
     .bi-repeat-1 {
         display: none;
     }
-    .bar {
-        height: 4px;
-        border-radius: 100px;
-        background-color: rgb(94, 94, 94);
-        width: 70%;
-        .barProgress {
-            height: 4px !important;
-            border-radius: 100px;
-            width: 10%;
-            position: relative;
-            h4 {
-                position: absolute;
-                right:-5px;
-                top: -6px;
-                padding: 0;
-                visibility: hidden;
-            }
-        }
-        .barProgress:hover {
-            background-color: green !important;
-            h4 {
-                visibility: visible;
-            }
+    .player-range {
+        height: 5px;
+        width: 400px;
+        background: #555;
+        border-radius: 15px;
+    }
+    .player {
+      height: 5px;
+      width: 100%;
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      position: relative;
+    }
+    @media screen and (max-width: 992px) {
+        .player-range {
+            width: 200px;
         }
     }
+
+    .player:active {
+      background: #2ecc71;
+    }
+    .player:hover {
+      background: #2ecc71;
+    }
+    .player-button {
+      width: 10px;
+      height: 10px;
+      border-radius: 20px;
+      background: #fff;
+      position: absolute;
+      right: 0px;
+      top: -3px;
+      cursor: pointer;
+      pointer-events:none;
+    }
 }
-
-
-
-
 
 .navButtVol {
     width: 230px;
@@ -71,39 +79,37 @@
     .bi-volume-up{
         display: none;
     }
-    .volume-container {
-        padding: 40px 0px;
-      }
-      
-      .volume-range {
-        height: 5px;
-        width: 60px;
-        background: #555;
-        border-radius: 15px;
-      }
-      
-      .volume {
+    .volume-range {
         height: 5px;
         width: 50px;
-        background: #2ecc71;
-        border: none;
-        border-radius: 10px;
-        position: relative;
-      }
-      
-      .volume-button {
-        width: 10px;
-        height: 10px;
-        border-radius: 20px;
-        background: #fff;
-        position: absolute;
-        right: 0px;
-        top: -3px;
-        cursor: pointer;
-        outline: none;
-        pointer-events: none;
-      }
-    
+        background: #555;
+        border-radius: 15px;
+    }
+    .volume {
+      height: 5px;
+      width: 50px;
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      position: relative;
+    }
+    .volume:active {
+      background: #2ecc71;
+    }
+    .volume:hover {
+      background: #2ecc71;
+    }
+    .volume-button {
+      width: 10px;
+      height: 10px;
+      border-radius: 20px;
+      background: #fff;
+      position: absolute;
+      right: 0px;
+      top: -3px;
+      cursor: pointer;
+      pointer-events:none;
+    }
 }
 
 

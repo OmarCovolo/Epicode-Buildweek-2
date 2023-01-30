@@ -32,13 +32,15 @@
                     <i class="bi repeat1 mx-2 bi-repeat-1"></i>
                 </div>
                 <div class="progressBar d-flex justify-content-center align-items-center w-100"> 
-                    <h5 class="mx-2 m-0">2:17</h5>
-                    <div class="bar">
-                        <div class="barProgress bg-light m-0 z-1">
-                            <h4>⚪</h4>
+                    <h5 class="mx-2 m-0 current-time"></h5>
+                    <div class="player-container">
+                      <div class="player-range">
+                        <div class="player">
+                          <div class="player-button"></div>
                         </div>
+                      </div>
                     </div>
-                    <h5 class="mx-2 m-0">4:59</h5>
+                    <h5 class="mx-2 m-0 totalDuration"></h5>
                 </div>
             </div>
             <div class="navButtVol d-flex align-items-center">
@@ -48,15 +50,13 @@
                 <i class="bi ms-2 bi-volume-down"></i>
                 <i class="bi ms-2 bi-volume-mute"></i>
                 <i class="bi ms-2 bi-volume-up"></i>
-                <div class="progressBar d-flex align-items-center"> 
-                    <div class="volume-container">
-                        <div class="volume-range">
-                          <div class="volume">
-                            <div class="volume-button"></div>
-                          </div>
+                  <div class="volume-container d-flex align-items-center">
+                      <div class="volume-range">
+                        <div class="volume">
+                          <div class="volume-button"></div>
                         </div>
                       </div>
-                </div>
+                  </div>
                 <i class="bi mx-2 bi-arrows-angle-expand"></i>
             </div>
         </div>
@@ -96,19 +96,32 @@
             rep1.style.display = 'none'
         }
 
+        // The mousemove event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.
+        //Mousedown is fired while the button is initially pressed, mouseup is fired when the button is released.
         const volume = document.querySelector('.volume');
         const volumeRange = document.querySelector('.volume-range');
         const volumeContainer = document.querySelector('.volume-container');
         const volumeBtn = document.querySelector('.volume-button');
-
         const volumeRangeWidth = volumeRange.getBoundingClientRect().width;
 
-        let mouseIsDown = false;
 
+        const player = document.querySelector('.player');
+        const playerRange = document.querySelector('.player-range');
+        const playerContainer = document.querySelector('.player-container');
+        const playerBtn = document.querySelector('.player-button');
+        const playerRangeWidth = playerRange.getBoundingClientRect().width;
+        
         window.addEventListener("mouseup", up);
         volumeContainer.addEventListener("mousedown", down);
         volumeContainer.addEventListener("mousedown", volumeSlide);
         volumeContainer.addEventListener("mousemove", volumeSlide);
+
+        playerContainer.addEventListener("mousedown", down);
+        playerContainer.addEventListener("mousedown", playerSlide);
+        playerContainer.addEventListener("mousemove", playerSlide);
+
+        let mouseIsDown = false;
+        firstClick = false;
 
         function down() {
           mouseIsDown = true;
@@ -120,20 +133,26 @@
         }
 
 
-        let firstClick = true; // this doesn't work
         function volumeSlide(event) {
-          if (mouseIsDown && !firstClick) {
-            let x = Math.floor(event.offsetX );
-            if (x < 0) x = 0; // check if it's too low
-            if (x > volumeRangeWidth) x = volumeRangeWidth; // check if it's too high
-            volume.style.width = (x + 10) + 'px';
-          }
-          //  "firstClick" ignores the offset on the first click as it gives the offset of the volume button
           firstClick = false;
+          if (mouseIsDown === true & firstClick === false) {
+            let x = Math.floor(event.offsetX );
+            if (x < 0) x = 0;
+            if (x > volumeRangeWidth) x = volumeRangeWidth; 
+            volume.style.width = (x) + 'px';
+          }
         }
-
         
-
+        function playerSlide(event) {
+          firstClick = false;
+          if (mouseIsDown === true & firstClick === false) {
+            let x = Math.floor(event.offsetX );
+            if (x < 0) x = 0;
+            if (x > playerRangeWidth) x = playerRangeWidth; 
+            let poiter = player.style.width = (x) + 'px';
+            console.log(poiter);
+          }
+        }
     </script>
   </body>
 </html>

@@ -32,30 +32,41 @@
 .navButtonPlay .bi-repeat-1 {
   display: none;
 }
-.navButtonPlay .bar {
-  height: 4px;
-  border-radius: 100px;
-  background-color: rgb(94, 94, 94);
-  width: 70%;
+.navButtonPlay .player-range {
+  height: 5px;
+  width: 400px;
+  background: #555;
+  border-radius: 15px;
 }
-.navButtonPlay .bar .barProgress {
-  height: 4px !important;
-  border-radius: 100px;
-  width: 10%;
+.navButtonPlay .player {
+  height: 5px;
+  width: 100%;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
   position: relative;
 }
-.navButtonPlay .bar .barProgress h4 {
+@media screen and (max-width: 992px) {
+  .navButtonPlay .player-range {
+    width: 200px;
+  }
+}
+.navButtonPlay .player:active {
+  background: #2ecc71;
+}
+.navButtonPlay .player:hover {
+  background: #2ecc71;
+}
+.navButtonPlay .player-button {
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background: #fff;
   position: absolute;
-  right: -5px;
-  top: -6px;
-  padding: 0;
-  visibility: hidden;
-}
-.navButtonPlay .bar .barProgress:hover {
-  background-color: green !important;
-}
-.navButtonPlay .bar .barProgress:hover h4 {
-  visibility: visible;
+  right: 0px;
+  top: -3px;
+  cursor: pointer;
+  pointer-events: none;
 }
 
 .navButtVol {
@@ -68,22 +79,25 @@
 .navButtVol .bi-volume-up {
   display: none;
 }
-.navButtVol .volume-container {
-  padding: 40px 0px;
-}
 .navButtVol .volume-range {
   height: 5px;
-  width: 60px;
+  width: 50px;
   background: #555;
   border-radius: 15px;
 }
 .navButtVol .volume {
   height: 5px;
   width: 50px;
-  background: #2ecc71;
+  background: #fff;
   border: none;
   border-radius: 10px;
   position: relative;
+}
+.navButtVol .volume:active {
+  background: #2ecc71;
+}
+.navButtVol .volume:hover {
+  background: #2ecc71;
 }
 .navButtVol .volume-button {
   width: 10px;
@@ -94,6 +108,5 @@
   right: 0px;
   top: -3px;
   cursor: pointer;
-  outline: none;
   pointer-events: none;
 }/*# sourceMappingURL=app.css.map */
