@@ -1,0 +1,89 @@
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  .row {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+
+    div {
+      div {
+        display: flex;
+      }
+
+      span {
+        margin-right: 210px;
+      }
+
+      i {
+        font-size: 20px;
+        margin-right: 10px;
+        color: #626262;
+      }
+    }
+    #iconFriend {
+      font-size: 40px;
+      padding-right: 10px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 20px;
+    }
+
+    #x:hover {
+      color: white;
+      background-color: rgb(148, 148, 148);
+      border-radius: 40px;
+    }
+
+    #add:hover {
+      color: white;
+    }
+
+    #chiudi {
+      color: white;
+      width: 58px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: lighter;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #555555;
+      padding: 6px 5px 6px 5px;
+      position: absolute;
+      top: 56px;
+      right: 16px;
+      visibility: hidden;
+    }
+
+    #aggiungiAmici {
+      color: white;
+      border-radius: 10px;
+      width: 120px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: lighter;
+      text-align: center;
+      background-color: #555555;
+      padding: 6px 5px 6px 5px;
+      position: absolute;
+      top: 56px;
+      right: 46px;
+      visibility: hidden;
+    }
+
+    #x:hover #chiudi,
+    #add:hover #aggiungiAmici {
+      visibility: visible;
+    }
+  }
+}
