@@ -140,21 +140,22 @@ liked.onclick = () => {
 let playing = document.querySelector(".play")
 let paused = document.querySelector(".pause")
 
-if (audio.play()) {
-    playing.style.display = 'none'
-    paused.style.display = 'block'
-}
-
 playing.onclick = () => {
-    playing.style.display = 'none'
-    paused.style.display = 'block'
     audio.play()
 }
 paused.onclick = () => {
-    playing.style.display = 'block'
-    paused.style.display = 'none'
-    audio.pause()
+  audio.pause()
 }
+
+audio.onpause= () => {
+  playing.style.display = 'block'
+  paused.style.display = 'none';
+};
+audio.onplay = () => {
+  playing.style.display = 'none'
+  paused.style.display = 'block';
+};
+
 
 let rep = document.querySelector(".repeat")
 let rep1 = document.querySelector(".repeat1")
