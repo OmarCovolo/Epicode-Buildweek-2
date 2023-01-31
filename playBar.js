@@ -84,7 +84,7 @@ function playerSlide(event) {
 }
 audio.addEventListener("loadedmetadata", () => {
   document.querySelector(".totalDuration").innerHTML = `${updateTime(audio.duration)}`;
-  maxVolume = audio.volume = 1
+  let maxVolume = audio.volume = 1
   // minVolume = (audio.volume = 0)
   // if (mouseIsDown === true) {
   //   let v = (volume.offsetWidth/volumeRange.offsetWidth) * (maxVolume +2)
