@@ -4,6 +4,7 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
+  height: 100vh;
 
   .row {
     position: absolute;
@@ -13,22 +14,78 @@
     height: 100vh;
     background-color: #121212;
     color: #ffffff;
+    padding: 0;
 
-    div {
-      div {
-        display: flex;
-      }
+    span {
+      margin-right: 200px;
+    }
 
-      span {
-        margin-right: 210px;
-      }
+    i {
+      font-size: 20px;
+      color: #626262;
+    }
 
-      i {
-        font-size: 20px;
-        margin-right: 10px;
-        color: #626262;
+    #x {
+      padding: 0 3px 0 3px;
+      &:hover {
+        color: white;
+        background-color: rgb(58, 58, 58);
+        border-radius: 40px;
       }
     }
+
+    #add:hover {
+      color: white;
+    }
+
+    #x:hover #chiudi,
+    #add:hover #aggiungiAmici {
+      visibility: visible;
+    }
+
+    #chiudi {
+      color: white;
+      border-radius: 10px;
+      font: {
+        size: 16px;
+        style: normal;
+        weight: lighter;
+      }
+      text-align: center;
+      background-color: #555555;
+      visibility: hidden;
+      padding: 6px 5px 6px 5px;
+      position: absolute;
+      width: 58px;
+      top: 56px;
+      right: 16px;
+    }
+
+    /*#aggiungiAmici {
+      color: white;
+      border-radius: 10px;
+      font {
+        size: 16px;
+        -style: normal;
+        -weight: lighter;
+      }
+      text-align: center;
+      background-color: #555555;
+      visibility: hidden;
+      padding: 6px 5px 6px 5px;
+      position: absolute;
+      width: 120px;
+      top: 56px;
+      right: 46px;
+    }*/
+
+    #aggiungiAmici {
+      @extend #chiudi;
+      width: 120px;
+      top: 56px;
+      right: 46px;
+    }
+
     #iconFriend {
       font-size: 40px;
       padding-right: 10px;
@@ -39,51 +96,58 @@
       line-height: 20px;
     }
 
-    #x:hover {
-      color: white;
-      background-color: rgb(148, 148, 148);
-      border-radius: 40px;
+    .bi-record-circle {
+      margin-right: 10px;
     }
+  }
+}
 
-    #add:hover {
-      color: white;
-    }
+/*CONTAINER AGGIUNGI AMICI*/
 
-    #chiudi {
-      color: white;
-      width: 58px;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: lighter;
-      border-radius: 10px;
-      text-align: center;
-      background-color: #555555;
-      padding: 6px 5px 6px 5px;
-      position: absolute;
-      top: 56px;
-      right: 16px;
-      visibility: hidden;
-    }
+#roww {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: #121212;
+  color: #7c7b7b;
+  visibility: hidden;
+  #colSuperiore {
+    width: 80%;
+    padding: 40px 0 15px 0;
 
-    #aggiungiAmici {
-      color: white;
-      border-radius: 10px;
-      width: 120px;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: lighter;
-      text-align: center;
-      background-color: #555555;
-      padding: 6px 5px 6px 5px;
-      position: absolute;
-      top: 56px;
-      right: 46px;
-      visibility: hidden;
-    }
+    margin: auto;
+    border-bottom: 2px solid;
+  }
+  .bi-facebook {
+    font-size: 40px;
+    color: blue;
+  }
 
-    #x:hover #chiudi,
-    #add:hover #aggiungiAmici {
-      visibility: visible;
+  p {
+    padding-left: 20px;
+    font-weight: bold;
+  }
+
+  #search {
+    background-color: #474747;
+    color: rgb(163, 163, 162);
+    width: 100%;
+    text-indent: 25px;
+    padding: 5px;
+    border-radius: 6px;
+    border: transparent;
+
+    &:focus-visible {
+      outline: transparent;
     }
+    position: relative;
+  }
+
+  .bi-search {
+    position: absolute;
+    top: 146px;
+    left: 20px;
   }
 }
