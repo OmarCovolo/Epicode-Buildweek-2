@@ -1,0 +1,181 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+
+nav, header, main{
+    padding:0.5rem 2rem;
+    background-color: violet;
+    width: 100%;
+    margin: 0 auto;
+} 
+
+.contenitore{
+    height: 100%;
+    width: 50%;
+    background-color: violet;
+    margin: 0 auto;
+} 
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top:0
+}
+
+.navArrow{
+    width: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navArrow i, #accountIcon{
+    font-size: 24px;
+}
+
+.account{
+    border-radius: 50px;
+    display: flex;
+    height: 1.6rem;
+    background-color: rgb(20, 19, 19);
+    align-items: center;
+    padding-right: 5px;
+    color: white;
+    padding-left: 1px;
+    /* padding: 0 5px 0.5px; */
+}
+
+.account span{
+    font-size: 15px;
+}
+#arrowDownIcon{
+    font-size: 12px;
+}
+.account span, #accountIcon{
+    margin-right: 5px;
+}
+
+/*Header*/
+.albumHeader{
+    display: flex;
+    margin: 1rem 0
+}
+#albumCover{
+    margin-right: 15px;
+    width:25rem;
+}
+
+#recordType, #description{
+    font-size: 0.8em;
+}
+#albumDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: white;
+    font-weight: 500;
+
+}
+h1{
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+#description{
+    margin:0;
+    display: flex;
+    align-items: center;
+}
+#artistImage{
+    width: 20px;
+    border-radius: 100%;
+    margin-right: 2px;
+}
+.contributors{
+    font-weight: bold;
+}
+#duration{
+    color: rgb(255 255 255 / 60%);
+}
+
+/*main*/
+
+main{
+    background-color: purple;
+    color: white;
+    overflow-y: scroll;
+    height: 91%;
+}
+
+.firstDivOfMain{
+    display: flex;
+    width: 247px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.7rem;
+}
+
+#play{
+    border-radius: 100%;
+    color: black;
+    background: #1fcb7b;
+    width: 55px;
+    width: px;
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+}
+
+.playIcons{
+    font-size: 30px;
+}
+
+.tableHeader, .tableRow{
+    width: 100%;
+    margin: 1rem 0;
+    
+}
+.tableRow{
+    display: flex;
+    align-items: center;
+}
+.tableHeader{
+    border-bottom: 0.5px solid #ffffff63;
+    padding: 0.7rem 0;
+    width: 100%;
+    margin: 1rem 0;
+    
+}
+
+.tableRow span{
+    white-space: nowrap;
+    align-items: center;
+}
+
+main::-webkit-scrollbar {
+    width: 10px;
+  }
+main::-webkit-scrollbar-thumb {
+    background-color: #888686;
+  }
+main::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(190, 185, 185);
+  }
+main::-webkit-scrollbar-thumb:active {
+    background-color: rgb(238, 231, 231);
+  }
+
+/*# sourceMappingURL=app.css.map */
