@@ -156,7 +156,6 @@ audio.onplay = () => {
   paused.style.display = 'block';
 };
 
-
 let rep = document.querySelector(".repeat")
 let rep1 = document.querySelector(".repeat1")
 

@@ -63,7 +63,7 @@
   border-radius: 20px;
   background: #fff;
   position: absolute;
-  right: 0px;
+  right: -8px;
   top: -3px;
   cursor: pointer;
   pointer-events: none;
@@ -99,7 +99,7 @@
   border-radius: 20px;
   background: #fff;
   position: absolute;
-  right: 0px;
+  right: -8px;
   top: -3px;
   cursor: pointer;
   pointer-events: none;
