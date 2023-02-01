@@ -1,61 +1,63 @@
 .container-fluid {
+  height: 100vh;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
   height: 100vh;
 }
-.container-fluid .row {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 400px;
-  height: 100vh;
-  background-color: #121212;
-  color: #ffffff;
-  padding: 0;
+
+.rightAside {
+  width: 20%;
+  position: fixed;
+  height: 100%;
+  background-color: black;
+  color: #b5b2b2;
+  font-weight: bold;
+  padding-left: 7px;
   /*#aggiungiAmici {
-    color: white;
-    border-radius: 10px;
-    font {
-      size: 16px;
-      -style: normal;
-      -weight: lighter;
-    }
-    text-align: center;
-    background-color: #555555;
-    visibility: hidden;
-    padding: 6px 5px 6px 5px;
-    position: absolute;
-    width: 120px;
-    top: 56px;
-    right: 46px;
-  }*/
+      color: white;
+      border-radius: 10px;
+      font {
+        size: 16px;
+        -style: normal;
+        -weight: lighter;
+      }
+      text-align: center;
+      background-color: #555555;
+      visibility: hidden;
+      padding: 6px 5px 6px 5px;
+      position: absolute;
+      width: 120px;
+      top: 56px;
+      right: 46px;
+    }*/
 }
-.container-fluid .row span {
-  margin-right: 200px;
+.rightAside span {
+  margin-right: 60px;
 }
-.container-fluid .row i {
-  font-size: 20px;
-  color: #626262;
-}
-.container-fluid .row #x {
+.rightAside #x {
   padding: 0 3px 0 3px;
+  font-size: 28px;
+  color: #b5b2b2;
+  font-weight: bold;
 }
-.container-fluid .row #x:hover {
+.rightAside #x:hover {
   color: white;
   background-color: rgb(58, 58, 58);
   border-radius: 40px;
 }
-.container-fluid .row #add:hover {
+.rightAside #add {
+  font-size: 28px;
+  color: #b5b2b2;
+  font-weight: bold;
+}
+.rightAside #add:hover {
   color: white;
 }
-.container-fluid .row #x:hover #chiudi, .container-fluid .row #x:hover #aggiungiAmici,
-.container-fluid .row #add:hover #aggiungiAmici {
+.rightAside #x:hover #chiudi, .rightAside #x:hover #aggiungiAmici,
+.rightAside #add:hover #aggiungiAmici {
   visibility: visible;
 }
-.container-fluid .row #chiudi, .container-fluid .row #aggiungiAmici {
+.rightAside #chiudi, .rightAside #aggiungiAmici {
   color: white;
   border-radius: 10px;
   font-size: 16px;
@@ -70,20 +72,20 @@
   top: 56px;
   right: 16px;
 }
-.container-fluid .row #aggiungiAmici {
+.rightAside #aggiungiAmici {
   width: 120px;
   top: 56px;
   right: 46px;
 }
-.container-fluid .row #iconFriend {
+.rightAside #iconFriend {
   font-size: 40px;
-  padding-right: 10px;
+  padding-right: 18px;
 }
-.container-fluid .row p {
+.rightAside p {
   margin: 0;
   line-height: 20px;
 }
-.container-fluid .row .bi-record-circle {
+.rightAside .bi-record-circle {
   margin-right: 10px;
 }
 
