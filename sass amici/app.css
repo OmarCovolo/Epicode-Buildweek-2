@@ -1,0 +1,132 @@
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 100vh;
+}
+.container-fluid .row {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 0;
+  /*#aggiungiAmici {
+    color: white;
+    border-radius: 10px;
+    font {
+      size: 16px;
+      -style: normal;
+      -weight: lighter;
+    }
+    text-align: center;
+    background-color: #555555;
+    visibility: hidden;
+    padding: 6px 5px 6px 5px;
+    position: absolute;
+    width: 120px;
+    top: 56px;
+    right: 46px;
+  }*/
+}
+.container-fluid .row span {
+  margin-right: 200px;
+}
+.container-fluid .row i {
+  font-size: 20px;
+  color: #626262;
+}
+.container-fluid .row #x {
+  padding: 0 3px 0 3px;
+}
+.container-fluid .row #x:hover {
+  color: white;
+  background-color: rgb(58, 58, 58);
+  border-radius: 40px;
+}
+.container-fluid .row #add:hover {
+  color: white;
+}
+.container-fluid .row #x:hover #chiudi, .container-fluid .row #x:hover #aggiungiAmici,
+.container-fluid .row #add:hover #aggiungiAmici {
+  visibility: visible;
+}
+.container-fluid .row #chiudi, .container-fluid .row #aggiungiAmici {
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: lighter;
+  text-align: center;
+  background-color: #555555;
+  visibility: hidden;
+  padding: 6px 5px 6px 5px;
+  position: absolute;
+  width: 58px;
+  top: 56px;
+  right: 16px;
+}
+.container-fluid .row #aggiungiAmici {
+  width: 120px;
+  top: 56px;
+  right: 46px;
+}
+.container-fluid .row #iconFriend {
+  font-size: 40px;
+  padding-right: 10px;
+}
+.container-fluid .row p {
+  margin: 0;
+  line-height: 20px;
+}
+.container-fluid .row .bi-record-circle {
+  margin-right: 10px;
+}
+
+/*CONTAINER AGGIUNGI AMICI*/
+#roww {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: #121212;
+  color: #7c7b7b;
+  visibility: hidden;
+}
+#roww #colSuperiore {
+  width: 80%;
+  padding: 40px 0 15px 0;
+  margin: auto;
+  border-bottom: 2px solid;
+}
+#roww .bi-facebook {
+  font-size: 40px;
+  color: blue;
+}
+#roww p {
+  padding-left: 20px;
+  font-weight: bold;
+}
+#roww #search {
+  background-color: #474747;
+  color: rgb(163, 163, 162);
+  width: 100%;
+  text-indent: 25px;
+  padding: 5px;
+  border-radius: 6px;
+  border: transparent;
+  position: relative;
+}
+#roww #search:focus-visible {
+  outline: transparent;
+}
+#roww .bi-search {
+  position: absolute;
+  top: 146px;
+  left: 20px;
+}/*# sourceMappingURL=app.css.map */
