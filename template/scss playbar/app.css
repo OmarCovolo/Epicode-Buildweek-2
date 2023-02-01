@@ -69,6 +69,14 @@
   pointer-events: none;
 }
 
+.bi-volume-mute {
+  display: none;
+}
+
+.bi-volume-down {
+  display: none;
+}
+
 .navButtVol {
   width: 230px;
   min-width: 130px;
