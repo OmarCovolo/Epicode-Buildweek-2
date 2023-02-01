@@ -1,3 +1,104 @@
+body {
+  width: 100%;
+}
+
+.bi-volume-mute {
+    display: none;
+  }
+  .bi-volume-down {
+    display: none;
+  }
+
+.artistContainer {
+    height: 400px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        font-size: 5rem;
+    }
+}
+
+.songContainer {
+    background: linear-gradient(180deg, rgba(60,60,60,0.9814385150812065) 0%, rgba(29,29,29,1) 38%, rgba(29,29,29,1) 66%, rgba(45,46,46,1) 100%) !important;
+}
+
+.playNotWorking {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: none;
+}
+
+.lastDiv{
+    margin-bottom: 75px;
+}
+
+.musicPlayButton {
+    border: none;
+    height: 50px;
+    width: 53px;
+    border-radius: 100%;
+    visibility: hidden;
+}
+
+.likedSongss{
+  margin-top: 20px;
+  img {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+  }
+  h4 {
+    font-size: 0.9rem;
+    color: #fff;
+  }
+  h5 {
+    font-size: 0.9rem;
+    color: rgba(171, 171, 171, 0.702)
+  }
+}
+
+
+.songList > div >{
+  h5 {
+    font-size: 0.9rem;
+    color: rgba(171, 171, 171, 0.702);
+  }
+}
+.songList{
+  transition: 0.5s;
+}
+.songList:hover {
+  background-color: rgba(85, 85, 85, 0.509);
+    .musicPlayButton{
+        visibility: visible;
+    }
+} 
+.playBB {
+    color: #fff;
+}
+.playBB:hover {
+color: #2ecc71;
+}
+
+button {
+    background: none;
+}
+
+
+.follow {
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 0.7rem !important;
+}
+
+
+
+
+
 .playbar {
     background-color: rgb(24, 24, 24);
     height: 75px;

@@ -1,68 +1,112 @@
-const API_STRIVES_SCHOOL = `https://striveschool-api.herokuapp.com/api/deezer/search`
+window.localStorage.getItem("artistValue");
+let getArtist = localStorage.getItem("artistValue")
+let artistID = JSON.parse(getArtist)
+console.log(artistID);
+
+console.log("1", artistID[0]);
+console.log("2", artistID[1]);
+
+let apiStrives = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistID[1]}`
 
 
-function handleSearchOnClick (){
-  document.querySelector('.containerJs1').innerHTML = " "
-  let form1Text = document.getElementById("form1").value
-  let queryToSearch = API_STRIVES_SCHOOL + '?q=' + form1Text
-  
-  //console.log(queryToSearch);
-  songSearch(queryToSearch)
+const artistSearch = (input) => {
+    fetch(input)
+    .then((res) => {
+        if (res.ok) {
+            return res.json();
+        } else {
+            console.error("la richiesta non e andata a buon fine");
+        }
+    })
+    .then((jsonPromise) => {
+        console.log(jsonPromise);
+        console.log(jsonPromise.name);
+        let likeReference = document.querySelector('.likedSongss')
+        likeReference.innerHTML += conteinerLiked (
+          jsonPromise.picture_small,
+          jsonPromise.name
+        )
+        let listReference = document.querySelector('.artistContainer')
+        listReference.innerHTML += containerArtist(
+        jsonPromise.name,
+        jsonPromise.picture_xl,
+        jsonPromise.nb_fan,
+        )
+        return jsonPromise.tracklist})
+    .then((tracklist) => {
+        fetch(tracklist)
+        .then((result) => {
+            if (result.ok) {
+                return result.json();
+            } else {
+                console.error("la richiesta non e andata a buon fine nella ricerca di brani");
+            }
+        })
+        .then((listPromise) => {
+            console.log("iiii", listPromise);
+            listPromise.data.forEach((element, i) => {
+              let listReference = document.querySelector('.innerSongContainer')
+              listReference.innerHTML += containerSongs(
+                  element.title,
+                  element.album.cover_small,
+                  element.duration/60,
+                  element.rank,
+                  element.preview,
+                  element.artist.name,
+                  i
+              )
+            });
+        })
+
+    })
+}
+artistSearch(apiStrives)
+
+const replaceQuotes = (string) => {
+  return string.replaceAll("'", "ʼ").replaceAll('"', "ˮ")
 }
 
-const songSearch = (input) => {
-  fetch(input)
-  .then((res) => {
-      if (res.ok) {
-          return res.json();
-      } else {
-          console.error("la richiesta non e andata a buon fine");
-      }
-  })
-  .then((jsonPromise) => {
-      let data = jsonPromise.data;
-      console.log(data);
-      data.forEach((element, i) => {
-          let listReference = document.querySelector('.containerJs1')
-          listReference.innerHTML += containerAlbum(
-              element.title_short,
-              element.album.cover_big,
-              element.artist.name,
-              element.album.title,
-              element.artist.picture,
-              element.preview,
-              element.artist.id,
-              i
-          )
-      })
-  })
+function containerArtist(artistName, artistBackground, numbersOfFans) {
+    return `
+    <div class="artistContainer col-12 text-white d-flex flex-column justify-content-between" style="background-image: url('${artistBackground}');">
+        <div class="d-flex justify-content-between">
+            <div>
+                <i class="bi fs-1 bi-arrow-left-short">
+                </i><i class="bi fs-1 bi-arrow-right-short"></i>
+            </div>
+            <div class="d-flex align-items-center"><i class="bi fs-1 me-2 bi-person-circle"></i>Pino Palladino<i class="bi fs-6 ms-2 bi-caret-down-fill"></i></div>
+        </div>
+        <div class="mb-3 ms-3">
+            <p class="m-0"><i class="bi me-2 text-primary bi-patch-check-fill"></i>Verified Artist</p>
+            <h1 class="fw-bold m-0 mb-3 ">${artistName}</h1>
+            <h5 class="fs-6 m-0">${numbersOfFans} ascoltatori mensili</h5>
+        </div>
+    </div>`
 }
 
+function containerSongs(songTitle, album, songDuration, rank, track, artistName, i) {
+    return `
+    <div class="songList text-white d-flex align-items-center">
+        <p class="m-0 mx-2 ">${i + 1}</p>
+        <button class="musicPlayButton mx-3 "onclick='playMusic("${track}", "${songTitle}", "${artistName}")'><i class="bi fs-2 playBB bi-play-circle-fill"></i></button>
+        <div class="d-flex w-100 ms-3 align-items-center my-3">
+            <div class="col-6 d-flex align-items-center"><img src="${album}"><h5 class="mx-2">${songTitle}</h5></div>
+            <h5 class="col-3">${rank}</h5>
+            <h5 class="col-3">${updateTime(songDuration*10)}</h5>
+        </div>
+    </div>`
+}
 
-function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPicture, track, id, i) {
+function conteinerLiked (picture, name) {
   return `
-  <div class="classCont col-12 col-md-3 text-light">
-      <div class="card shadow my-3 position-relative border-0 bg-dark m-3" id="${id}" >
-          <h5 class="card-title fw-bold m-3 text-center h-25">${songTitle}</h5>
-          <button onclick='playMusic("${track}", "${songTitle}", "${artistName}")'>play</button>
-          <img src=${albumCover} class="card-img-top w-100 border-3">
-          <div class="d-flex">
-              <div class="col-6">
-                  <h5 class="card-title text-primary fw-bold my-4 text-center" onclick='bringToArtistPage("${artistName}","${id}")'>${artistName}</h5>
-                  <h5 class="card-title fs-6 my-3 text-center">${albumtitle}</h5>
-              </div>
-              <img class="col-6 my-4" src=${artistPicture}>
-          </div>
-      </div>
-  </div>`
+  <img class="position-relative" src="${picture}">
+  <i class="bi position-absolute text-success bi-heart-fill"></i>
+  <div class="d-flex flex-column ms-3">
+    <h4 class="m-0 mb-2" >Hai messo Mi piace a x brani</h4>
+    <h5> Di ${name} </h5>
+  </div>
+  `
 }
-
-function bringToArtistPage(artist, id) {
-  let infoArr = [artist, id]
-  location.href = "./artist.html"
-  localStorage.setItem("artistValue", JSON.stringify(infoArr))
-}
-
 
 let audio = new Audio()
 
@@ -226,10 +270,9 @@ function playerSlide(event) {
   }
 }
 
-function updateTime (time) {
+function updateTime(time) {
   const seconds = String(Math.floor(time % 60) || 0).padStart("2", "0");
   const minutes = String(Math.floor(time / 60) || 0).padStart('0');
   let timer = minutes + ":" + seconds
   return timer
 }
-

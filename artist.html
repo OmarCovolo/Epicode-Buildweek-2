@@ -3,22 +3,37 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./app.css">
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <title>playBar</title>
+    <link rel="stylesheet" href="./artist css/artistSection.css">
   </head>
   <body>
+    <div class="artistContainer"></div>
+    <div class="songContainer d-flex flex-column">
+        <div class="d-flex align-items-center"><button class=" playBB playNotWorking m-4"><i class="bi fs-1 bi-play-circle-fill"></i></button>
+            <p class="follow text-white fw-bold m-0 text-uppercase">Follow</p><i class="ms-3 text-white bi bi-three-dots"></i>
+        </div>
+        <div class="ms-4 text-white d-flex">
+            <h3 class="col-8">Popolari</h3>
+            <h3 class="col-4 text-nowrap">Brani che ti Piaccionio</h3>
+        </div>
+        <div class="lastDiv col-12 d-flex">
+            <div class="innerSongContainer mx-4 col-8"></div>
+            <div class="likedSongss col-4 d-flex">
+            </div>
+        </div>
+    </div>
     <div class="playbar text-light">
         <div class=" d-flex justify-content-between align-items-center h-100">
             <div class="currentlyPlaying info d-flex align-items-center">
                 <div class="mx-3">
-                    <h4 class="fw-bold m-0">Album name</h4>
-                    <h5 class="fw-light m-0 mt-1">Song Title</h5>
+                    <h4 class="SongTitle fw-bold m-0"></h4>
+                    <h5 class="ArtistName fw-light m-0 mt-1"></h5>
                 </div>
                 <div class="ms-2">
                     <i class="bi like bi-heart"></i>
-                    <i class="bi liked bi-heart-fill"></i>
+                    <i class="bi liked bi-heart-fill text-success"></i>
                 </div>
             </div>
             <div class="navButtonPlay w-50 d-flex flex-column align-items-center">
@@ -57,12 +72,11 @@
                         </div>
                       </div>
                   </div>
-                <i class="bi mx-3 bi-arrows-angle-expand"></i>
+                <i class="bi mx-4 bi-arrows-angle-expand"></i>
             </div>
         </div>
     </div>
+    <script src="./artist.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="/playBar.js">
-    </script>
   </body>
 </html>
