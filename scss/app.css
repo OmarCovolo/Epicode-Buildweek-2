@@ -1,7 +1,10 @@
 html,
-body {
+body,
+.container-fluid {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -20,10 +23,12 @@ a {
 }
 
 .leftAside {
-  width: 341.5px;
+  width: 20%;
   background-color: black;
   height: 100%;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   padding: 0.5rem 1.3rem;
 }
 .leftAside .topLeftAside .secondUl {
@@ -43,7 +48,8 @@ a {
 .leftAside .topLeftAside a:hover {
   color: white;
 }
-.leftAside .topLeftAside .flexedLi, .leftAside .topLeftAside a {
+.leftAside .topLeftAside .flexedLi,
+.leftAside .topLeftAside a {
   display: flex;
   align-items: center;
 }
@@ -57,7 +63,8 @@ a {
   font-size: 28px;
   margin-right: 1rem;
 }
-.leftAside .topLeftAside #search, .leftAside .topLeftAside #library {
+.leftAside .topLeftAside #search,
+.leftAside .topLeftAside #library {
   display: inline-block;
 }
 .leftAside .bottom-left-aside {
