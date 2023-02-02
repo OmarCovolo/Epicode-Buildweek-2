@@ -26,11 +26,11 @@ a{
 
 
 .contenitore{
-    
+    padding-bottom: 75px;
     background-color: rgb(61, 60, 60);
     margin: 0 250px;
     overflow-y: scroll;
-    height: 88%;
+    height: 100%;
 } 
 
 nav{
@@ -171,12 +171,13 @@ main{
     align-items: center;
 }
 .tableHeader{
-    border-bottom: 0.5px solid #ffffff63;
+    border-bottom: 0.5px solid rgb(202 199 199 / 28%);;
     padding: 0.7rem 0;
     width: 100%;
     margin: 1rem 0;
     position: sticky;
-    top:52px
+    top:52px;
+    background-color: rgb(61, 60, 60);
 }
 
 .tableRow span{
