@@ -81,7 +81,7 @@ a {
 
 .leftAside .bottom-left-aside {
   overflow-y: scroll;
-  height: 50%;
+  height: 38%;
 }
 
 .leftAside .bottom-left-aside .playlist {
@@ -127,6 +127,18 @@ input[type=text], textarea {
   position: absolute;
   right: 260px;
   background-color: #2ecc71;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888686;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(190, 185, 185);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(238, 231, 231);
 }
 
 /*# sourceMappingURL=app.css.map */
