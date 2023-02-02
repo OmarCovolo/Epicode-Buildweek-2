@@ -133,7 +133,7 @@ input[type=text], textarea {
 }
 
 #card {
-  background-color: #101010;
+  background-color: #282828;
   width: 14vw;
   height: 40vh;
   color: white;
@@ -184,7 +184,7 @@ a {
   }
 
   100% {
-    background-color: #282828;
+    background-color: #101010;
     color: white;
   }
 }
@@ -195,7 +195,7 @@ a {
   }
 
   100% {
-    background-color: #282828;
+    background-color: #101010;
     color: white;
   }
 }
