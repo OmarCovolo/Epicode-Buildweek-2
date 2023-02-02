@@ -105,19 +105,18 @@ a {
   height: 25px;
 }
 
-input[type="text"] {
+input[type=text] {
   border: none;
   border-radius: 50px;
   color: #fff;
 }
 
-input[type="text"]:focus {
+input[type=text]:focus {
   outline: 4px solid #2ecc71;
   /* oranges! yey */
 }
 
-input[type="text"],
-textarea {
+input[type=text], textarea {
   background-color: #343434;
 }
 
@@ -130,17 +129,7 @@ textarea {
 }
 
 .middle {
-  background: linear-gradient(0deg,
-      rgba(0, 0, 0, 0.9814385151) 3%,
-      rgb(29, 29, 29) 38%,
-      rgb(47, 47, 47) 62%,
-      rgb(0, 0, 0) 100%);
-}
-
-bi-search {
-  position: absolute;
-  left: 261px;
-  top: 14px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9814385151) 3%, rgb(29, 29, 29) 38%, rgb(47, 47, 47) 62%, rgb(0, 0, 0) 100%);
 }
 
 #card {
@@ -220,23 +209,23 @@ a {
 
 @-webkit-keyframes scale {
   0% {
-    color: #1cdf63;
+    color: #1CDF63;
   }
 
   100% {
     transform: scale(1.3);
-    color: #1cdf63;
+    color: #1CDF63;
   }
 }
 
 @keyframes scale {
   0% {
-    color: #1cdf63;
+    color: #1CDF63;
   }
 
   100% {
     transform: scale(1.3);
-    color: #1cdf63;
+    color: #1CDF63;
   }
 }
 
@@ -253,38 +242,33 @@ h2 {
   margin-left: 0%;
 }
 
-#cardLarge,
-#cardLarge1,
-#cardLarge2,
-#cardLarge3,
-#cardLarge4,
-#cardLarge5 {
+#cardLarge, #cardLarge1, #cardLarge2, #cardLarge3, #cardLarge4, #cardLarge5 {
   width: 24vw;
-  height: 8vh;
+  height: 9vh;
+  padding: 1vh;
   background-color: #282828;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
+  position: relative;
 }
 
-#cardHi,
-#cardHi1,
-#cardHi2,
-#cardHi3,
-#cardHi4 {
+
+
+#cardHi, #cardHi1, #cardHi2, #cardHi3, #cardHi4 {
   width: 14vw;
-  height: 40vh;
+  height: 45vh;
   background-color: #282828;
   color: white;
   border-radius: 10px;
   text-align: center;
-  margin: 5%;
+  margin: 0;
   position: relative;
   padding: 1vw;
   margin-bottom: 10%;
 }
 
-#placeholder,
-#placeholder1,
-#placeholder2 {
+
+
+#placeholder, #placeholder1, #placeholder2 {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -299,16 +283,20 @@ h2 {
 
 #cardLong {
   display: flex;
+  align-items: center;
   padding: 1%;
 }
 
 #imgLong {
   height: 7vh;
+
 }
 
 #titleLong {
   font-size: 1rem;
-  margin: 2%;
+  width: 100%;
+  height: 100%;
+  margin-left: 1vw;
 }
 
 #cardTall {
@@ -319,6 +307,7 @@ h2 {
 #imgTall {
   width: 100%;
   border-radius: 10px;
+
 }
 
 #titleTall {
@@ -329,7 +318,6 @@ h2 {
   color: transparent;
   position: absolute;
   left: 80%;
-  top: 1%;
   font-size: 50px !important;
 }
 
