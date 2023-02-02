@@ -2,6 +2,7 @@ const API_STRIVES_SCHOOL = `https://striveschool-api.herokuapp.com/api/deezer/se
 
 
 function handleSearchOnClick (){
+  document.querySelector('.containerJ').innerHTML = " "
   document.querySelector('.containerJs1').innerHTML = " "
   let form1Text = document.getElementById("form1").value
   let queryToSearch = API_STRIVES_SCHOOL + '?q=' + form1Text
@@ -25,6 +26,7 @@ const songSearch = (input) => {
       let data = jsonPromise.data;
       console.log(data);
       let newsReference = document.querySelector('.containerJ')
+      console.log(data[0]);
       newsReference.innerHTML += albumNews(
         data[0].album.cover_big,
         data[0].artist.name,
@@ -67,10 +69,10 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
 function albumNews(albumCover, artistName, albumtitle, track, artistid, albumId, i, title) {
     console.log("ddd", track );
     return `
-  <div class="newsCont col-12 col-md-3 text-light d-flex m-3">
-      <img src="${albumCover}" onclick='bringToAlbumPage("${albumtitle}","${albumId}")' alt="Card_image"/>
-      <div class="d-flex flex-column ms-3">
-        <h6>Album</h6>
+  <div class="newsCont col-12 col-md-3 text-light d-flex m-5 w-75">
+      <img class="m-3" src="${albumCover}" onclick='bringToAlbumPage("${albumtitle}","${albumId}")' alt="Card_image"/>
+      <div class="d-flex flex-column ms-3 w-100">
+        <div class="d-flex justify-content-between"><h6>Album</h6><h6 class="border rounded-5 p-1 bg-secondary-transparent">nascondi sezione</h6></div>
         <h1>${albumtitle}</h1>
         <p onclick='bringToArtistPage("${artistName}","${artistid}")'>${artistName}</p>
         <p>Ascolta il nuovo singolo di ${artistName}</p>
@@ -82,8 +84,6 @@ function albumNews(albumCover, artistName, albumtitle, track, artistid, albumId,
   </div>
   `
 }
-
-
 
 function bringToArtistPage(artist, id) {
   let infoArr = [artist, id]
