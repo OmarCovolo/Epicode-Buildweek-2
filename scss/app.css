@@ -181,8 +181,7 @@ a {
 
 #pulsante {
   position: absolute;
-  top: -65%;
-
+  top: 40%;
   left: 65%;
   color: transparent;
   background-color: transparent;
@@ -222,4 +221,42 @@ a {
   animation: scale;
   animation-duration: 3s;
 
+}
+
+h2 {
+  color: white;
+  margin: 5%;
+}
+
+#cardLarge {
+  width: 24vw;
+  height: 8vh;
+  background-color: #474141;
+  margin-bottom: 5%;
+
+}
+
+#cardHi {
+  width: 14vw;
+  height: 40vh;
+  background-color: #474141;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10%;
+  margin: 5%;
+  position: relative;
+}
+
+#placeholder {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#cardcontainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

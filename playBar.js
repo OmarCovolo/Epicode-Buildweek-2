@@ -4,11 +4,13 @@ const API_STRIVES_SCHOOL = `https://striveschool-api.herokuapp.com/api/deezer/se
 function handleSearchOnClick (){
   document.querySelector('.containerJs1').innerHTML = " "
   let form1Text = document.getElementById("form1").value
-  let queryToSearch = API_STRIVES_SCHOOL + '?q=' + form1Text
-  
+  let queryToSearch = API_STRIVES_SCHOOL + '?q=' + form1Text 
   //console.log(queryToSearch);
   songSearch(queryToSearch)
 }
+
+
+
 
 const songSearch = (input) => {
   fetch(input)
@@ -58,6 +60,7 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
 </div>
   `
 }
+
 
 function bringToArtistPage(artist, id) {
   let infoArr = [artist, id]
