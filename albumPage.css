@@ -53,7 +53,10 @@ nav{
 .navArrow i, #accountIcon{
     font-size: 24px;
 }
-
+.shuffle{
+    font-size: 30px;
+    display: none;
+}
 .account{
     border-radius: 50px;
     display: flex;
@@ -130,10 +133,9 @@ main{
 .firstDivOfMain{
     display: flex;
     width: 40%;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 0.7rem; 
-    margin: 0.7rem 2rem 0
+    margin-top: 0.7rem;
+    margin: 0.7rem 2rem 0;
 }
 
 #play{
@@ -192,4 +194,72 @@ main{
 .paddingDiv{
     margin:0 2 rem
 }
+#iconDiv{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+}
+
+@media screen and (max-width: 480px){
+    .leftAside, .rightAside, #data, #nbTracks, #duration, nav, .tableHeader{
+        display: none;
+    }
+    .contenitore{
+        margin:0;
+    }
+    .albumHeader{
+        flex-direction: column;
+    }
+    #description{
+        order:2
+    }
+    #recordType{
+        order:3
+    }
+    .contributors{
+        order:2
+    }
+    #albumCover{
+        width: 75%;
+        margin: 0 auto 10px;
+    }
+    #iconDiv{
+        order: -1;
+        width:35%;
+    }
+    .firstDivOfMain{
+        width:100%;
+        margin:0;
+        padding:10px 12px 0;
+        justify-content: space-between;
+    }
+    #iconDiv{
+        margin:0
+    }
+    .albumHeader{
+        padding:2rem 0
+    }
+    #albumDescription{
+        padding:0 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 6rem;
+    }
+    .shuffle{
+        display: inline;
+        margin-right: 20px;
+    }
+    #playId{
+        width: 24%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    h1{
+        margin:0
+    }
+    }
+
 /*# sourceMappingURL=app.css.map */
