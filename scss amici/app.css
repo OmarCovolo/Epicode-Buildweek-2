@@ -13,8 +13,7 @@
   height: 100%;
   background-color: black;
   color: #b5b2b2;
-  font-weight: bold;
-  padding-left: 7px;
+  padding-left: 16px;
   /*#aggiungiAmici {
       color: white;
       border-radius: 10px;
@@ -34,11 +33,12 @@
     }*/
 }
 .rightAside span {
-  margin-right: 60px;
+  margin-right: 75px;
+  font-weight: bold;
 }
 .rightAside #x {
   padding: 0 3px 0 3px;
-  font-size: 28px;
+  font-size: 20px;
   color: #b5b2b2;
   font-weight: bold;
 }
@@ -48,7 +48,7 @@
   border-radius: 40px;
 }
 .rightAside #add {
-  font-size: 28px;
+  font-size: 20px;
   color: #b5b2b2;
   font-weight: bold;
 }
@@ -79,6 +79,9 @@
   top: 56px;
   right: 46px;
 }
+.rightAside .contenitoreAmici {
+  padding-left: 10px;
+}
 .rightAside #iconFriend {
   font-size: 40px;
   padding-right: 18px;
@@ -86,6 +89,7 @@
 .rightAside p {
   margin: 0;
   line-height: 20px;
+  font-size: 14px;
 }
 .rightAside .bi-record-circle {
   margin-right: 10px;
