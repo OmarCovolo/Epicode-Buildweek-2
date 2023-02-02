@@ -2,6 +2,7 @@ const API_STRIVES_SCHOOL = `https://striveschool-api.herokuapp.com/api/deezer/se
 
 
 function handleSearchOnClick (){
+  document.querySelector('.containerJ').innerHTML = " "
   document.querySelector('.containerJs1').innerHTML = " "
   let form1Text = document.getElementById("form1").value
   let queryToSearch = API_STRIVES_SCHOOL + '?q=' + form1Text
@@ -9,6 +10,8 @@ function handleSearchOnClick (){
   //console.log(queryToSearch);
   songSearch(queryToSearch)
 }
+let index = API_STRIVES_SCHOOL + '?q=' + "*"
+window.onload = () =>{songSearch(index)}
 
 const songSearch = (input) => {
   fetch(input)
@@ -22,6 +25,16 @@ const songSearch = (input) => {
   .then((jsonPromise) => {
       let data = jsonPromise.data;
       console.log(data);
+      let newsReference = document.querySelector('.containerJ')
+      console.log(data[0]);
+      newsReference.innerHTML += albumNews(
+        data[0].album.cover_big,
+        data[0].artist.name,
+        data[0].album.title,
+        data[0].preview,
+        data[0].album.id,
+        data[0].title_short,
+      )
       data.forEach((element, i) => {
           let listReference = document.querySelector('.containerJs1')
           listReference.innerHTML += containerAlbum(
@@ -44,20 +57,39 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
   return `
   <div class="classCont col-12 col-md-3 text-light">
   <div id="card">
-  
-
-      <img src="${artistPicture}" alt="Card_image">
-  
+      <img src="${artistPicture}" onclick='bringToAlbumPage("${albumtitle}","${albumId}")' alt="Card_image">
       <i id="pulsante" onclick='playMusic("${track}", "${songTitle}", "${artistName}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+<<<<<<< HEAD
+        <h5>${songTitle}</h5>
+        <p onclick='bringToArtistPage("${artistName}","${artistid}")'>${artistName}</p>
+=======
   
           <h5>${songTitle}</h5>
-          <h5 onclick='bringToAlbumPage("${albumtitle}","${albumId}")'>${albumtitle}  </h5>
-      <p onclick='bringToArtistPage("${artistName}","${artistid}")'>${artistName} </p>
+      <p>${artistName}</p>
     
 
+>>>>>>> d36d1ae2631a467c4cbf770062abef7020f049f1
   </div>
-
 </div>
+  `
+}
+
+function albumNews(albumCover, artistName, albumtitle, track, artistid, albumId, i, title) {
+    console.log("ddd", track );
+    return `
+  <div class="newsCont col-12 col-md-3 text-light d-flex m-5 w-75">
+      <img class="m-3" src="${albumCover}" onclick='bringToAlbumPage("${albumtitle}","${albumId}")' alt="Card_image"/>
+      <div class="d-flex flex-column ms-3 w-100">
+        <div class="d-flex justify-content-between"><h6>Album</h6><h6 class="border rounded-5 p-1 bg-secondary-transparent">nascondi sezione</h6></div>
+        <h1>${albumtitle}</h1>
+        <p onclick='bringToArtistPage("${artistName}","${artistid}")'>${artistName}</p>
+        <p>Ascolta il nuovo singolo di ${artistName}</p>
+        <div class="d-flex">
+          <button class="bi play text-white mx-2 fs-5 rounded-5 bg-dark text-center border-1">Salva</button>
+          <button onclick='playMusic("${track}", "${title}", "${artistName}")' class="bi play text-white mx-2 fs-4 rounded-5 bg-success text-center ">Play</button>
+          </div>
+      </div>
+  </div>
   `
 }
 
@@ -65,12 +97,6 @@ function bringToArtistPage(artist, id) {
   let infoArr = [artist, id]
   location.href = "./artist.html"
   localStorage.setItem("artistValue", JSON.stringify(infoArr))
-}
-
-function bringToAlbumPage(album, id) {
-  let albumArr = [album, id]
-  location.href = "./albumpage.html"
-  localStorage.setItem("albumeValue", JSON.stringify(albumArr))
 }
 
 
