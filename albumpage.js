@@ -43,11 +43,11 @@ const takeAlbum = async function(id) {
                 console.log(data.duration)
                 let spanDuration = document.getElementById("duration")
                 if(duration >= 60) {
-                    
+                    console.log(duration)
                     let hour = Math.floor(duration/60)
                     let min = Math.floor(duration - (hour * 60))
                     
-                    
+                    console.log(duration)
                     
                     if(hour === 1){
                         spanDuration.innerText = hour + " ora " + min + " min"
@@ -95,12 +95,7 @@ const takeAlbum = async function(id) {
                 } else if(songDuration>=60){
                     songDuration = Math.floor(songDuration/60)
                     let sec = data.tracks.data[i].duration - songDuration*60
-                    if(sec<10){
-                        songDuration = songDuration + ":0" + sec
-                    }else{
-                        songDuration = songDuration + ":" + sec
-                    }
-                    
+                    songDuration = songDuration + ":" + sec
                 }
                 table.innerHTML += `
                     <div class="row tableRow d-flex">
