@@ -244,22 +244,23 @@ h2 {
 
 #cardLarge, #cardLarge1, #cardLarge2, #cardLarge3, #cardLarge4, #cardLarge5 {
   width: 24vw;
-  height: 8vh;
+  height: 9vh;
+  padding: 1vh;
   background-color: #282828;
-  margin-bottom: 5%;
-
+  margin-bottom: 1%;
+  position: relative;
 }
 
 
 
 #cardHi, #cardHi1, #cardHi2, #cardHi3, #cardHi4 {
   width: 14vw;
-  height: 40vh;
+  height: 45vh;
   background-color: #282828;
   color: white;
   border-radius: 10px;
   text-align: center;
-  margin: 5%;
+  margin: 0;
   position: relative;
   padding: 1vw;
   margin-bottom: 10%;
@@ -282,6 +283,7 @@ h2 {
 
 #cardLong {
   display: flex;
+  align-items: center;
   padding: 1%;
 }
 
@@ -292,7 +294,9 @@ h2 {
 
 #titleLong {
   font-size: 1rem;
-  margin: 2%;
+  width: 100%;
+  height: 100%;
+  margin-left: 1vw;
 }
 
 #cardTall {
@@ -308,6 +312,49 @@ h2 {
 
 #titleTall {
   margin: 20%;
+}
+
+#pulsantelong {
+  color: transparent;
+  position: absolute;
+  left: 80%;
+  font-size: 50px !important;
+}
+
+#pulsantehi {
+  color: transparent;
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  font-size: 50px !important;
+}
+
+#pulsantelong:hover {
+  -webkit-animation: scale;
+  animation: scale;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+#pulsantehi:hover {
+  -webkit-animation: scale;
+  animation: scale;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+#cardHi:hover, #cardHi1:hover, #cardHi2:hover, #cardHi3:hover, #cardHi4:hover {
+  -webkit-animation: light;
+  animation: light;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+#cardLarge:hover, #cardLarge1:hover, #cardLarge2:hover, #cardLarge3:hover, #cardLarge4:hover, #cardLarge5:hover {
+  -webkit-animation: light;
+  animation: light;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 /*# sourceMappingURL=app.css.map */

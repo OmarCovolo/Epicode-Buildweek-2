@@ -86,7 +86,7 @@ function albumNews(albumCover, artistName, albumtitle, track, artistid, albumId,
 }
 const cardLarge = async function () {
   try {
-    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/75621062')
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/364187517')
     console.log(res)
     if (res.ok) {
       let dataLong = await res.json()
@@ -110,6 +110,7 @@ const cardLarge = async function () {
               <div>
                   <h5 id="titleLong">${card.title}</h5>
               </div>
+              <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -151,7 +152,8 @@ const cardLarge1 = async function () {
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
-              </div>
+                  </div>
+                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -194,7 +196,8 @@ const cardLarge2 = async function () {
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
-              </div>
+                  </div>
+                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -237,7 +240,8 @@ const cardLarge3 = async function () {
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
-              </div>
+                  </div>
+                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -278,7 +282,8 @@ const cardLarge4 = async function () {
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
-              </div>
+                  </div>
+                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -296,7 +301,7 @@ const cardLarge4 = async function () {
 cardLarge4()
 const cardLarge5 = async function () {
   try {
-    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/247385')
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/108563')
     console.log(res)
     if (res.ok) {
       let dataLong = await res.json()
@@ -319,7 +324,8 @@ const cardLarge5 = async function () {
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
-              </div>
+                  </div>
+                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -362,6 +368,7 @@ const cardHi = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
+              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -379,7 +386,7 @@ const cardHi = async function () {
 cardHi()
 const cardHi1 = async function () {
   try {
-    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/364187517')
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/721846')
     console.log(res)
     if (res.ok) {
       let dataLong = await res.json()
@@ -403,6 +410,7 @@ const cardHi1 = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
+              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -444,6 +452,8 @@ const cardHi2 = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
+              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+
 
           </div>
       </a>
@@ -485,6 +495,8 @@ const cardHi3 = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
+              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+
 
           </div>
       </a>
@@ -502,7 +514,7 @@ const cardHi3 = async function () {
 cardHi3()
 const cardHi4 = async function () {
   try {
-    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/108563')
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/247385')
     console.log(res)
     if (res.ok) {
       let dataLong = await res.json()
@@ -526,6 +538,8 @@ const cardHi4 = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
+              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+
 
           </div>
       </a>
