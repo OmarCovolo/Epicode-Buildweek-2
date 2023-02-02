@@ -26,12 +26,11 @@ a{
 
 
 .contenitore{
-    height: 100%;
-    width: 50%;
-    background-color: purple;
-    margin: 0 auto;
+    
+    background-color: rgb(61, 60, 60);
+    margin: 0 250px;
     overflow-y: scroll;
-    height: 91%;
+    height: 88%;
 } 
 
 nav{
@@ -40,7 +39,7 @@ nav{
     align-items: center;
     position: sticky;
     top:0;
-    background-color: violet;
+    background-color: gray;
     padding:0.5rem 2rem;
 }
 
@@ -83,12 +82,12 @@ nav{
 .albumHeader{
     display: flex;
     background: transparent;
-    background-color: violet;
+    background-color: gray;
     padding: 2rem;
 }
 #albumCover{
     margin-right: 15px;
-    width:25rem;
+    width:40%;
 }
 
 #recordType, #description{
@@ -128,6 +127,14 @@ h1{
 main{
     color: white;
     
+}
+
+.threeDots{
+    display: none;
+}
+
+#invisibleYear{
+    display: none;
 }
 
 .firstDivOfMain{
@@ -177,19 +184,6 @@ main{
     align-items: center;
 }
 
-.contenitore::-webkit-scrollbar {
-    width: 10px;
-  }
-.contenitore::-webkit-scrollbar-thumb {
-    background-color: #888686;
-  }
-.contenitore::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(190, 185, 185);
-  }
-.contenitore::-webkit-scrollbar-thumb:active {
-    background-color: rgb(238, 231, 231);
-  }
-
 .paddingDiv{
     margin:0 2 rem
 }
@@ -199,9 +193,26 @@ main{
     justify-content: space-between;
     margin-left: 10%;
 }
+footer{
+    display: none;
+    position: sticky;
+    bottom:0;
+    background-color: #0000008c;
+    padding: 5px 0;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+footer i{
+    font-size: 30px;
+    color:white;
+}
 
 @media screen and (max-width: 480px){
-    .leftAside, .rightAside, #data, #nbTracks, #duration, nav, .tableHeader{
+    .leftAside, .rightAside, #data, #nbTracks, #duration, nav, .tableHeader, .playbar{
         display: none;
     }
     .contenitore{
@@ -213,8 +224,11 @@ main{
     #description{
         order:2
     }
-    #recordType{
+    #invisibleDiv{
         order:3
+    }
+    #invisibleYear{
+        display: inline;
     }
     .contributors{
         order:2
@@ -259,6 +273,21 @@ main{
     h1{
         margin:0
     }
+    .threeDots{
+        display: inline;
+        width: 15%;
+    }
+    .tableRow{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-around;
+
+    }
+
     }
 
 /*# sourceMappingURL=app.css.map */
