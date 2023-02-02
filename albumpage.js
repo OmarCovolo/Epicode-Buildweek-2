@@ -1,3 +1,22 @@
+// SCROLL ANIMATIONS
+let container = document.querySelector(".contenitore")
+let headerHeight = document.querySelector("nav").offsetHeight
+
+let nav = document.querySelector("nav")
+console.log(window.scrollY)
+container.onscroll = () => {
+    if(window.scrollY > headerHeight) {
+        nav.style.backgroundColor = "white"
+        nav.style.transition = "1s"
+        
+    } else {
+        nav.style.backgroundColor = "violet"
+        nav.style.transition = "1s"
+        
+    }
+}
+
+// CREAZIONE PAGINA
 window.localStorage.getItem("albumeValue");
 let getAlbum = localStorage.getItem("albumeValue")
 let albumID = JSON.parse(getAlbum)
@@ -19,9 +38,9 @@ const takeAlbum = async function(id) {
             h1.innerText = data.title
             let description = document.getElementById("description")
             description.innerHTML = `
-                <img id="artistImage" src=${data.contributors[0].picture_small}> <span class="contributors">${data.artist.name}</span> &middot ${data.release_date.slice(0,4)} &middot ${data.nb_tracks} brani, <span id="duration"></span>`
-                let duration = 100000/60
-                console.log(duration)
+                <img id="artistImage" src=${data.contributors[0].picture_big}> <span class="contributors">${data.artist.name}</span> <span id="data">&middot ${data.release_date.slice(0,4)}</span> <span id="nbTracks">&middot ${data.nb_tracks} brani,</span> <span id="duration"></span>`
+                let duration = data.duration/60
+                console.log(data.duration)
                 let spanDuration = document.getElementById("duration")
                 if(duration >= 60) {
                     console.log(duration)
@@ -79,13 +98,13 @@ const takeAlbum = async function(id) {
                     songDuration = songDuration + ":" + sec
                 }
                 table.innerHTML += `
-                    <div class="row tableRow">
-                        <div class="col col-1 text-end"><span>${i+1}</span></div>
-                            <div class="col col-4"><span>${data.tracks.data[i].title}</span><br />
+                    <div class="row tableRow d-flex">
+                        <div class="col col-1 text-end d-none d-md-block"><span>${i+1}</span></div>
+                            <div class="col col-4 "><span>${data.tracks.data[i].title}</span><br />
                             <span>${data.tracks.data[i].artist.name}</span>
                         </div>
-                        <div class="col col-4 text-end"><span>${finalNum}</span></div>
-                        <div class="col col-3 text-center"><span>${songDuration}</span></div>
+                        <div class="col col-4 text-end d-none d-md-block"><span>${finalNum}</span></div>
+                        <div class="col col-3 text-center d-none d-md-block"><span>${songDuration}</span></div>
                     </div> `
                 
                     
@@ -101,8 +120,9 @@ const takeAlbum = async function(id) {
 takeAlbum(albumID[1])
 
 
-// SCROLL ANIMATIONS
 
-let nav = document.querySelector("nav")
+
+
+
 
 
