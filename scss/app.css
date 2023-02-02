@@ -229,7 +229,7 @@ h2 {
   margin: 5%;
 }
 
-#cardLarge {
+#cardLarge, #cardLarge1, #cardLarge2, #cardLarge3 {
   width: 24vw;
   height: 8vh;
   background-color: #282828;
@@ -237,31 +237,8 @@ h2 {
 
 }
 
-#cardLarge1 {
-  width: 24vw;
-  height: 8vh;
-  background-color: #282828;
-  margin-bottom: 5%;
 
-}
-
-#cardLarge2 {
-  width: 24vw;
-  height: 8vh;
-  background-color: #282828;
-  margin-bottom: 5%;
-
-}
-
-#cardLarge3 {
-  width: 24vw;
-  height: 8vh;
-  background-color: #282828;
-  margin-bottom: 5%;
-
-}
-
-#cardHi {
+#cardHi, #cardHi1 {
   width: 14vw;
   height: 40vh;
   background-color: #282828;
@@ -271,19 +248,10 @@ h2 {
   margin: 5%;
   position: relative;
   padding: 0.5vw;
+  margin-bottom: 10%;
 }
 
-#cardHi1 {
-  width: 14vw;
-  height: 40vh;
-  background-color: #282828;
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  margin: 5%;
-  position: relative;
-  padding: 0.5vw;
-}
+
 
 #placeholder {
   display: flex;
