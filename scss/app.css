@@ -92,17 +92,18 @@ a {
   height: 25px;
 }
 
-input[type=text] {
+input[type="text"] {
   border: none;
   border-radius: 50px;
   color: #fff;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   outline: 4px solid #2ecc71; /* oranges! yey */
 }
 
-input[type=text], textarea {
+input[type="text"],
+textarea {
   background-color: #343434;
 }
 
@@ -115,7 +116,13 @@ input[type=text], textarea {
 }
 
 .middle {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9814385151) 3%, rgb(29, 29, 29) 38%, rgb(47, 47, 47) 62%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9814385151) 3%,
+    rgb(29, 29, 29) 38%,
+    rgb(47, 47, 47) 62%,
+    rgb(0, 0, 0) 100%
+  );
 }
 
 bi-search {
@@ -125,7 +132,7 @@ bi-search {
 }
 
 #card {
-  background-color: #101010;
+  background-color: #282828;
   width: 14vw;
   height: 40vh;
   color: white;
@@ -175,7 +182,7 @@ a {
     color: white;
   }
   100% {
-    background-color: #282828;
+    background-color: #101010;
     color: white;
   }
 }
@@ -185,15 +192,15 @@ a {
     color: white;
   }
   100% {
-    background-color: #282828;
+    background-color: #101010;
     color: white;
   }
 }
 #card:hover {
   -webkit-animation: light;
-          animation: light;
+  animation: light;
   -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 @-webkit-keyframes scale {
@@ -217,7 +224,87 @@ a {
 }
 #pulsante:hover {
   -webkit-animation: scale;
-          animation: scale;
+  animation: scale;
   -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-}/*# sourceMappingURL=app.css.map */
+  animation-duration: 3s;
+}
+
+h2 {
+  color: white;
+  margin: 5%;
+  margin-left: 0%;
+}
+
+#cardLarge,
+#cardLarge1,
+#cardLarge2,
+#cardLarge3,
+#cardLarge4,
+#cardLarge5 {
+  width: 24vw;
+  height: 8vh;
+  background-color: #282828;
+  margin-bottom: 5%;
+}
+
+#cardHi,
+#cardHi1,
+#cardHi2,
+#cardHi3,
+#cardHi4 {
+  width: 14vw;
+  height: 40vh;
+  background-color: #282828;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5%;
+  position: relative;
+  padding: 1vw;
+  margin-bottom: 10%;
+}
+
+#placeholder,
+#placeholder1,
+#placeholder2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#cardcontainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#cardLong {
+  display: flex;
+  padding: 1%;
+}
+
+#imgLong {
+  height: 7vh;
+}
+
+#titleLong {
+  font-size: 1rem;
+  margin: 2%;
+}
+
+#cardTall {
+  display: flex;
+  flex-direction: column;
+}
+
+#imgTall {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#titleTall {
+  margin: 20%;
+}
+
+/*# sourceMappingURL=app.css.map */
