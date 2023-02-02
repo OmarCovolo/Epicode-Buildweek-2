@@ -111,4 +111,18 @@
   top: -3px;
   cursor: pointer;
   pointer-events: none;
+}
+
+.containerJ {
+  background: linear-gradient(27deg, rgba(0, 0, 0, 0.9814385151) 3%, rgb(0, 0, 0) 46%, rgb(47, 47, 47) 86%);
+  display: flex;
+}
+.containerJ h1 {
+  font-size: 4rem;
+}
+.containerJ img {
+  width: 250px;
+}
+.containerJ button {
+  width: 100px;
 }/*# sourceMappingURL=app.css.map */

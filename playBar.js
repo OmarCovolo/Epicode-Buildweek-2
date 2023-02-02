@@ -9,6 +9,8 @@ function handleSearchOnClick (){
   //console.log(queryToSearch);
   songSearch(queryToSearch)
 }
+let index = API_STRIVES_SCHOOL + '?q=' + "*"
+window.onload = () =>{songSearch(index)}
 
 const songSearch = (input) => {
   fetch(input)
@@ -22,6 +24,15 @@ const songSearch = (input) => {
   .then((jsonPromise) => {
       let data = jsonPromise.data;
       console.log(data);
+      let newsReference = document.querySelector('.containerJ')
+      newsReference.innerHTML += albumNews(
+        data[0].album.cover_big,
+        data[0].artist.name,
+        data[0].album.title,
+        data[0].preview,
+        data[0].album.id,
+        data[0].title_short,
+      )
       data.forEach((element, i) => {
           let listReference = document.querySelector('.containerJs1')
           listReference.innerHTML += containerAlbum(
