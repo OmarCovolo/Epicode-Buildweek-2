@@ -53,6 +53,291 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
   `
 }
 
+
+
+
+
+
+
+
+const cardLarge = async function () {
+  try {
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/75621062')
+    console.log(res)
+    if (res.ok) {
+      let dataLong = await res.json()
+      console.log('datacard', dataLong)
+      let card=dataLong;
+      console.log(card)
+
+      
+
+      let listLong = document.querySelector('#cardLarge')
+
+        listLong.innerHTML =
+        listLong.innerHTML +
+
+     `
+     
+     <div class="col"><a href="${card.link}">
+          <div id="cardLong">
+  
+              <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
+              <div>
+                  <h5 id="titleLong">${card.title}</h5>
+              </div>
+
+          </div>
+      </a>
+      </div>
+      `
+
+    } else {
+      console.log('Qualcosa è andato storto')
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+cardLarge()
+
+const cardLarge1 = async function () {
+  try {
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/300062')
+    console.log(res)
+    if (res.ok) {
+      let dataLong = await res.json()
+      console.log('datacard', dataLong)
+      let card=dataLong;
+      console.log(card)
+
+      
+
+      let listLong = document.querySelector('#cardLarge1')
+
+        listLong.innerHTML =
+        listLong.innerHTML +
+
+     `
+     
+     <div class="col"><a href="${card.link}">
+          <div id="cardLong">
+  
+              <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
+              <div>
+                  <h5 id="titleLong">${card.title}</h5>
+              </div>
+
+          </div>
+      </a>
+      </div>
+      `
+
+    } else {
+      console.log('Qualcosa è andato storto')
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+cardLarge1()
+
+
+const cardLarge2 = async function () {
+  try {
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/662259')
+    console.log(res)
+    if (res.ok) {
+      let dataLong = await res.json()
+      console.log('datacard', dataLong)
+      let card=dataLong;
+      console.log(card)
+
+      
+
+      let listLong = document.querySelector('#cardLarge2')
+
+        listLong.innerHTML =
+        listLong.innerHTML +
+
+     `
+     
+     <div class="col"><a href="${card.link}">
+          <div id="cardLong">
+  
+              <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
+              <div>
+                  <h5 id="titleLong">${card.title}</h5>
+              </div>
+
+          </div>
+      </a>
+      </div>
+      `
+
+    } else {
+      console.log('Qualcosa è andato storto')
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+cardLarge2()
+
+
+const cardLarge3 = async function () {
+  try {
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/108706862')
+    console.log(res)
+    if (res.ok) {
+      let dataLong = await res.json()
+      console.log('datacard', dataLong)
+      let card=dataLong;
+      console.log(card)
+
+      
+
+      let listLong = document.querySelector('#cardLarge3')
+
+        listLong.innerHTML =
+        listLong.innerHTML +
+
+     `
+     
+     <div class="col"><a href="${card.link}">
+          <div id="cardLong">
+  
+              <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
+              <div>
+                  <h5 id="titleLong">${card.title}</h5>
+              </div>
+
+          </div>
+      </a>
+      </div>
+      `
+
+    } else {
+      console.log('Qualcosa è andato storto')
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+cardLarge3()
+
+
+
+
+
+
+const cardHi = async function () {
+  try {
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/155994342')
+    console.log(res)
+    if (res.ok) {
+      let dataLong = await res.json()
+      console.log('datacard', dataLong)
+      let card=dataLong;
+      console.log(card)
+
+      
+
+      let listLong = document.querySelector('#cardHi')
+
+        listLong.innerHTML =
+        listLong.innerHTML +
+
+     `
+     
+     <div class="col"><a href="${card.link}">
+          <div id="cardTall">
+  
+              <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
+              <div>
+                  <h5 id="titleTall">${card.title}</h5>
+              </div>
+
+          </div>
+      </a>
+      </div>
+      `
+
+    } else {
+      console.log('Qualcosa è andato storto')
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+cardHi()
+const cardHi1 = async function () {
+  try {
+    let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/364187517')
+    console.log(res)
+    if (res.ok) {
+      let dataLong = await res.json()
+      console.log('datacard', dataLong)
+      let card=dataLong;
+      console.log(card)
+
+      
+
+      let listLong = document.querySelector('#cardHi1')
+
+        listLong.innerHTML =
+        listLong.innerHTML +
+
+     `
+     
+     <div class="col"><a href="${card.link}">
+          <div id="cardTall">
+  
+              <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
+              <div>
+                  <h5 id="titleTall">${card.title}</h5>
+              </div>
+
+          </div>
+      </a>
+      </div>
+      `
+
+    } else {
+      console.log('Qualcosa è andato storto')
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+cardHi1()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function bringToArtistPage(artist, id) {
   let infoArr = [artist, id]
   location.href = "./artist.html"

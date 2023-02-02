@@ -232,7 +232,31 @@ h2 {
 #cardLarge {
   width: 24vw;
   height: 8vh;
-  background-color: #474141;
+  background-color: #282828;
+  margin-bottom: 5%;
+
+}
+
+#cardLarge1 {
+  width: 24vw;
+  height: 8vh;
+  background-color: #282828;
+  margin-bottom: 5%;
+
+}
+
+#cardLarge2 {
+  width: 24vw;
+  height: 8vh;
+  background-color: #282828;
+  margin-bottom: 5%;
+
+}
+
+#cardLarge3 {
+  width: 24vw;
+  height: 8vh;
+  background-color: #282828;
   margin-bottom: 5%;
 
 }
@@ -240,13 +264,25 @@ h2 {
 #cardHi {
   width: 14vw;
   height: 40vh;
-  background-color: #474141;
+  background-color: #282828;
   color: white;
   border-radius: 10px;
   text-align: center;
-  padding: 10%;
   margin: 5%;
   position: relative;
+  padding: 0.5vw;
+}
+
+#cardHi1 {
+  width: 14vw;
+  height: 40vh;
+  background-color: #282828;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5%;
+  position: relative;
+  padding: 0.5vw;
 }
 
 #placeholder {
@@ -260,4 +296,33 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+#cardLong {
+  display: flex;
+  padding: 1%;
+}
+
+#imgLong {
+  height: 7vh;
+
+}
+
+#titleLong {
+  font-size: 1rem;
+  margin: 2%;
+}
+
+#cardTall {
+  display: flex;
+  flex-direction: column;
+}
+
+#imgTall {
+  width: 13vw;
+
+}
+
+#titleTall {
+  margin: 20%;
 }
