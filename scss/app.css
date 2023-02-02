@@ -152,6 +152,7 @@ input[type=text], textarea {
   text-align: center;
   padding: 10%;
   margin: 5%;
+  position: relative;
 }
 
 #card>img {
@@ -164,24 +165,25 @@ a {
 }
 
 #card>h5 {
+  position: absolute;
+  top: 70%;
   font-size: 1rem;
-  position: relative;
-  top: -15%;
   text-align: start;
 }
 
 #card>p {
+  position: absolute;
+  top: 90%;
   font-size: 0.8rem;
-  position: relative;
-  top: -10%;
   text-align: start;
   color: gray;
 }
 
 #pulsante {
-  position: relative;
-  top: -65px;
-  left: 55px;
+  position: absolute;
+  top: -65%;
+
+  left: 65%;
   color: transparent;
   background-color: transparent;
   border: transparent;
