@@ -18,15 +18,16 @@
   background-color: black;
   color: #b5b2b2;
   font-weight: bold;
-  padding-left: 7px;
+  padding-left: 10px;
 
   span {
-    margin-right: 60px;
+    margin-right: 70px;
+    font-weight: bold;
   }
 
   #x {
     padding: 0 3px 0 3px;
-    font-size: 28px;
+    font-size: 20px;
     color: #b5b2b2;
     font-weight: bold;
 
@@ -37,7 +38,7 @@
     }
   }
   #add {
-    font-size: 28px;
+    font-size: 20px;
     color: #b5b2b2;
     font-weight: bold;
   }
@@ -93,6 +94,10 @@
     right: 46px;
   }
 
+  .contenitoreAmici {
+    margin-left: 20px;
+  }
+
   #iconFriend {
     font-size: 40px;
     padding-right: 18px;
@@ -101,6 +106,8 @@
   p {
     margin: 0;
     line-height: 20px;
+    font-size: 14px;
+    font-weight: lighter;
   }
 
   .bi-record-circle {
