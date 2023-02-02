@@ -27,11 +27,11 @@ a{
 
 .contenitore{
     height: 100%;
-    width: 50%;
+    
     background-color: purple;
-    margin: 0 auto;
+    margin: 0 250px;
     overflow-y: scroll;
-    height: 91%;
+    height: 89%;
 } 
 
 nav{
@@ -85,7 +85,7 @@ nav{
 }
 #albumCover{
     margin-right: 15px;
-    width:25rem;
+    width:40%;
 }
 
 #recordType, #description{
@@ -129,10 +129,11 @@ main{
 
 .firstDivOfMain{
     display: flex;
-    width: 247px;
+    width: 40%;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.7rem;
+    margin-top: 0.7rem; 
+    margin: 0.7rem 2rem 0
 }
 
 #play{
@@ -174,18 +175,19 @@ main{
     align-items: center;
 }
 
-.contenitore::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
   }
-.contenitore::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #888686;
   }
-.contenitore::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: rgb(190, 185, 185);
   }
-.contenitore::-webkit-scrollbar-thumb:active {
+::-webkit-scrollbar-thumb:active {
     background-color: rgb(238, 231, 231);
-  }
+}
+
 
 .paddingDiv{
     margin:0 2 rem
