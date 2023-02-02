@@ -47,7 +47,7 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
   <div id="card">
   
 
-  <img src="${artistPicture}" onclick='bringToAlbumPage("${albumtitle}","${albumId}")' alt="Card_image">
+      <img src="${artistPicture}" alt="Card_image">
   
       <i id="pulsante" onclick='playMusic("${track}", "${songTitle}", "${artistName}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
   
