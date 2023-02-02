@@ -241,7 +241,7 @@ h2 {
   margin: 5%;
 }
 
-#cardLarge, #cardLarge1, #cardLarge2, #cardLarge3 {
+#cardLarge, #cardLarge1, #cardLarge2, #cardLarge3, #cardLarge4, #cardLarge5 {
   width: 24vw;
   height: 8vh;
   background-color: #282828;
@@ -251,7 +251,7 @@ h2 {
 
 
 
-#cardHi, #cardHi1 {
+#cardHi, #cardHi1, #cardHi2, #cardHi3, #cardHi4 {
   width: 14vw;
   height: 40vh;
   background-color: #282828;
