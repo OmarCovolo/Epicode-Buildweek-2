@@ -43,31 +43,27 @@ const songSearch = (input) => {
 function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPicture, track, artistid, albumId, i) {
   return `
   <div class="classCont col-12 col-md-3 text-light">
-      <div class="card shadow my-3 position-relative border-0 bg-dark m-3" id="${id}" >
-          <h5 class="card-title fw-bold m-3 text-center h-25">${songTitle}</h5>
-          <button onclick='playMusic("${track}", "${songTitle}", "${artistName}")'>play</button>
-          <img src=${albumCover} class="card-img-top w-100 border-3">
-          <div class="d-flex">
-              <div class="col-6">
-                  <h5 class="card-title text-primary fw-bold my-4 text-center" onclick='bringToArtistPage("${artistName}","${id}")'>${artistName}</h5>
-                  <h5 class="card-title fs-6 my-3 text-center">${albumtitle}</h5>
-              </div>
-              <img class="col-6 my-4" src=${artistPicture}>
-          </div>
-      </div>
-  </div>`
+  <div id="card">
+  
+
+      <img src="${artistPicture}" alt="Card_image">
+  
+      <i id="pulsante" onclick='playMusic("${track}", "${songTitle}", "${artistName}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+  
+          <h5>${songTitle}</h5>
+      <p>${artistName}</p>
+    
+
+  </div>
+
+</div>
+  `
 }
 
 function bringToArtistPage(artist, id) {
   let infoArr = [artist, id]
   location.href = "./artist.html"
   localStorage.setItem("artistValue", JSON.stringify(infoArr))
-}
-
-function bringToAlbumPage(album, id) {
-  let albumArr = [album, id]
-  location.href = "./album.html"
-  localStorage.setItem("albumeValue", JSON.stringify(albumArr))
 }
 
 
@@ -239,4 +235,5 @@ function updateTime (time) {
   let timer = minutes + ":" + seconds
   return timer
 }
+
 
