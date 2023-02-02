@@ -121,6 +121,21 @@
     }
 }
 
+.containerJ {
+  background: linear-gradient(27deg, rgba(0,0,0,0.9814385150812065) 3%, rgba(0,0,0,1) 46%, rgba(47,47,47,1) 86%);
+
+  display: flex;
+  h1{
+    font-size: 4rem;
+  }
+  img {
+    width: 250px;
+  }
+  button {
+    width: 100px;
+  }
+}
+
 
 
 
