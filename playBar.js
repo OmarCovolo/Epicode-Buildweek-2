@@ -51,8 +51,7 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
       <i id="pulsante" onclick='playMusic("${track}", "${songTitle}", "${artistName}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
   
           <h5>${songTitle}</h5>
-          <h5 onclick='bringToAlbumPage("${albumtitle}","${albumId}")'>${albumtitle}  </h5>
-      <p onclick='bringToArtistPage("${artistName}","${artistid}")'>${artistName} </p>
+      <p>${artistName}</p>
     
 
   </div>
@@ -65,12 +64,6 @@ function bringToArtistPage(artist, id) {
   let infoArr = [artist, id]
   location.href = "./artist.html"
   localStorage.setItem("artistValue", JSON.stringify(infoArr))
-}
-
-function bringToAlbumPage(album, id) {
-  let albumArr = [album, id]
-  location.href = "./albumpage.html"
-  localStorage.setItem("albumeValue", JSON.stringify(albumArr))
 }
 
 
