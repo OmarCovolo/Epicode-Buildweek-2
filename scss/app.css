@@ -239,6 +239,7 @@ a {
 h2 {
   color: white;
   margin: 5%;
+  margin-left: 0%;
 }
 
 #cardLarge, #cardLarge1, #cardLarge2, #cardLarge3, #cardLarge4, #cardLarge5 {
@@ -266,7 +267,7 @@ h2 {
 
 
 
-#placeholder {
+#placeholder, #placeholder1, #placeholder2 {
   display: flex;
   flex-direction: column;
   width: 100%;
