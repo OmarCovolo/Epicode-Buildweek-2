@@ -1,5 +1,7 @@
 const nascondi = (event) => {
   event.target.parentElement.parentElement.parentElement.parentElement.remove();
+  const middleReferece = (document.querySelector(".middle").style.marginRight =
+    "0");
 };
 
 var aperto = false;
