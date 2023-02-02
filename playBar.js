@@ -254,11 +254,6 @@ const cardLarge3 = async function () {
 
 cardLarge3()
 
-
-
-
-
-
 const cardHi = async function () {
   try {
     let res = await fetch(' https://striveschool-api.herokuapp.com/api/deezer/album/155994342')
@@ -341,21 +336,6 @@ const cardHi1 = async function () {
 }
 
 cardHi1()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function bringToArtistPage(artist, id) {
