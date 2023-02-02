@@ -32,6 +32,7 @@ const songSearch = (input) => {
               element.artist.picture,
               element.preview,
               element.artist.id,
+              element.album.id,
               i
           )
       })
@@ -39,7 +40,7 @@ const songSearch = (input) => {
 }
 
 
-function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPicture, track, id, i) {
+function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPicture, track, artistid, albumId, i) {
   return `
   <div class="classCont col-12 col-md-3 text-light">
   <div id="card">
@@ -50,7 +51,8 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
       <i id="pulsante" onclick='playMusic("${track}", "${songTitle}", "${artistName}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
   
           <h5>${songTitle}</h5>
-      <p>${artistName}</p>
+          <h5 onclick='bringToAlbumPage("${albumtitle}","${albumId}")'>${albumtitle}  </h5>
+      <p onclick='bringToArtistPage("${artistName}","${artistid}")'>${artistName} </p>
     
 
   </div>
@@ -63,6 +65,12 @@ function bringToArtistPage(artist, id) {
   let infoArr = [artist, id]
   location.href = "./artist.html"
   localStorage.setItem("artistValue", JSON.stringify(infoArr))
+}
+
+function bringToAlbumPage(album, id) {
+  let albumArr = [album, id]
+  location.href = "./albumpage.html"
+  localStorage.setItem("albumeValue", JSON.stringify(albumArr))
 }
 
 
@@ -234,4 +242,5 @@ function updateTime (time) {
   let timer = minutes + ":" + seconds
   return timer
 }
+
 

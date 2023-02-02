@@ -1,9 +1,15 @@
+window.localStorage.getItem("albumeValue");
+let getAlbum = localStorage.getItem("albumeValue")
+let albumID = JSON.parse(getAlbum)
+console.log(albumID);
+
 const takeAlbum = async function(id) {
     try{
         let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/album/' + id)
+        console.log(response)
         if(response.ok){
             let data = await response.json()
-            
+            console.log(data)
             //CREAZIONE ALBUM HEADER
             let albumCover = document.getElementById("albumCover")
             albumCover.src= data.cover
@@ -92,7 +98,7 @@ const takeAlbum = async function(id) {
     }
 }
 
-takeAlbum(75621062)
+takeAlbum(albumID[1])
 
 
 // SCROLL ANIMATIONS
