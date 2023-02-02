@@ -20,15 +20,15 @@ const takeAlbum = async function(id) {
             let description = document.getElementById("description")
             description.innerHTML = `
                 <img id="artistImage" src=${data.contributors[0].picture_small}> <span class="contributors">${data.artist.name}</span> &middot ${data.release_date.slice(0,4)} &middot ${data.nb_tracks} brani, <span id="duration"></span>`
-                let duration = data.duration/60
-                console.log(data.duration)
+                let duration = 100000/60
+                console.log(duration)
                 let spanDuration = document.getElementById("duration")
                 if(duration >= 60) {
-                    
+                    console.log(duration)
                     let hour = Math.floor(duration/60)
                     let min = Math.floor(duration - (hour * 60))
                     
-                    
+                    console.log(duration)
                     
                     if(hour === 1){
                         spanDuration.innerText = hour + " ora " + min + " min"
@@ -76,12 +76,7 @@ const takeAlbum = async function(id) {
                 } else if(songDuration>=60){
                     songDuration = Math.floor(songDuration/60)
                     let sec = data.tracks.data[i].duration - songDuration*60
-                    if(sec<10){
-                        songDuration = songDuration + ":0" + sec
-                    }else{
-                        songDuration = songDuration + ":" + sec
-                    }
-                    
+                    songDuration = songDuration + ":" + sec
                 }
                 table.innerHTML += `
                     <div class="row tableRow">
@@ -108,20 +103,6 @@ takeAlbum(albumID[1])
 
 // SCROLL ANIMATIONS
 
-let headerHeight = document.querySelector(".albumHeader").offsetHeight - document.querySelector("nav").offsetHeight
 let nav = document.querySelector("nav")
-
-window.onscroll = () => {
-    if(window.scrollY > headerHeight) {
-        nav.style.backgroundColor = "white"
-        nav.style.transition = "1s"
-
-    } else {
-        nav.style.backgroundColor = "#ffc017"
-        nav.style.transition = "1s"
-        
-    }
-}
-
 
 
