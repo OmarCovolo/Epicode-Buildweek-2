@@ -1,20 +1,20 @@
-// // SCROLL ANIMATIONS
-// let container = document.querySelector(".contenitore")
-// let headerHeight = document.querySelector("nav").offsetHeight
+// SCROLL ANIMATIONS
+let container = document.querySelector(".contenitore")
+let headerHeight = document.querySelector("nav").offsetHeight
 
-// let nav = document.querySelector("nav")
-// console.log(window.scrollY)
-// container.onscroll = () => {
-//     if(window.scrollY > headerHeight) {
-//         nav.style.backgroundColor = "white"
-//         nav.style.transition = "1s"
+let nav = document.querySelector("nav")
+console.log(window.scrollY)
+container.onscroll = () => {
+    if(window.scrollY > headerHeight) {
+        nav.style.backgroundColor = "white"
+        nav.style.transition = "1s"
         
-//     } else {
-//         nav.style.backgroundColor = "violet"
-//         nav.style.transition = "1s"
+    } else {
+        nav.style.backgroundColor = "violet"
+        nav.style.transition = "1s"
         
-//     }
-// }
+    }
+}
 
 // CREAZIONE PAGINA
 window.localStorage.getItem("albumeValue");
@@ -34,8 +34,6 @@ const takeAlbum = async function(id) {
             albumCover.src= data.cover
             let spanType = document.getElementById("recordType")
             spanType.innerText = data.record_type.toUpperCase()
-            let invisibleSpan = document.getElementById("invisibleYear")
-            invisibleSpan.innerText =  data.release_date.slice(0,4)
             let h1 = document.querySelector("h1")
             h1.innerText = data.title
             let description = document.getElementById("description")
@@ -94,16 +92,10 @@ const takeAlbum = async function(id) {
                 let songDuration = data.tracks.data[i].duration
                 if(songDuration<60){
                     songDuration = "0:" + songDuration
-                    
-                    
                 } else if(songDuration>=60){
                     songDuration = Math.floor(songDuration/60)
                     let sec = data.tracks.data[i].duration - songDuration*60
-                    if(sec<10){
-                        songDuration = songDuration + ":0" + sec
-                    } else{
                     songDuration = songDuration + ":" + sec
-                    }
                 }
                 table.innerHTML += `
                     <div class="row tableRow d-flex">
@@ -113,7 +105,6 @@ const takeAlbum = async function(id) {
                         </div>
                         <div class="col col-4 text-end d-none d-md-block"><span>${finalNum}</span></div>
                         <div class="col col-3 text-center d-none d-md-block"><span>${songDuration}</span></div>
-                        <i class="bi bi-three-dots playIcons threeDots"></i>
                     </div> `
                 
                     

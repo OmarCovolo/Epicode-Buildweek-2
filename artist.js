@@ -43,7 +43,8 @@ const artistSearch = (input) => {
             }
         })
         .then((listPromise) => {
-            console.log("iiii", listPromise);
+          if (listPromise.data.length > 0) {
+            console.log("iiii", listPromise.data.length);
             listPromise.data.forEach((element, i) => {
               let listReference = document.querySelector('.innerSongContainer')
               listReference.innerHTML += containerSongs(
@@ -56,6 +57,8 @@ const artistSearch = (input) => {
                   i
               )
             });
+          } else {let listReference = document.querySelector('.innerSongContainer')
+          listReference.innerHTML += noSongsFound ()}
         })
 
     })
@@ -74,7 +77,7 @@ function containerArtist(artistName, artistBackground, numbersOfFans) {
                 <i class="bi fs-1 bi-arrow-left-short">
                 </i><i class="bi fs-1 bi-arrow-right-short"></i>
             </div>
-            <div class="d-flex align-items-center"><i class="bi fs-1 me-2 bi-person-circle"></i>Pino Palladino<i class="bi fs-6 ms-2 bi-caret-down-fill"></i></div>
+            <div class=" account d-flex align-items-center"><i class="bi fs-1 me-2 bi-person-circle"></i>Pino Palladino<i class="bi fs-6 ms-2 bi-caret-down-fill"></i></div>
         </div>
         <div class="mb-3 ms-3">
             <p class="m-0"><i class="bi me-2 text-primary bi-patch-check-fill"></i>Verified Artist</p>
@@ -86,15 +89,20 @@ function containerArtist(artistName, artistBackground, numbersOfFans) {
 
 function containerSongs(songTitle, album, songDuration, rank, track, artistName, i) {
     return `
-    <div class="songList text-white d-flex align-items-center">
+    <div class="songList text-white d-flex align-items-center w-100 rounded-3">
         <p class="m-0 mx-2 ">${i + 1}</p>
         <button class="musicPlayButton mx-3 "onclick='playMusic("${track}", "${songTitle}", "${artistName}")'><i class="bi fs-2 playBB bi-play-circle-fill"></i></button>
-        <div class="d-flex w-100 ms-3 align-items-center my-3">
-            <div class="col-6 d-flex align-items-center"><img src="${album}"><h5 class="mx-2">${songTitle}</h5></div>
+        <div class=" infoSong d-flex w-100 ms-3 align-items-center my-3">
+            <div class="col-6 m-0 d-flex align-items-center"><img src="${album}"><h5 class="mx-2">${songTitle}</h5></div>
             <h5 class="col-3">${rank}</h5>
             <h5 class="col-3">${updateTime(songDuration*10)}</h5>
         </div>
     </div>`
+}
+
+function noSongsFound () {
+  return`
+  <h1 class="h-100 text-light my-5">NO SONGS TO BE FOUND :( </h1>`
 }
 
 function conteinerLiked (picture, name) {
