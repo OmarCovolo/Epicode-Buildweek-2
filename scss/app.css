@@ -31,63 +31,50 @@ a {
   left: 0;
   padding: 0.5rem 1.3rem;
 }
-
 .leftAside .topLeftAside .secondUl {
   border-bottom: 0.5px solid rgba(181, 178, 178, 0.4196078431);
   padding: 30px 0 10px;
 }
-
 .leftAside .topLeftAside li {
   color: #b5b2b2;
 }
-
 .leftAside .topLeftAside li i:hover {
   color: white;
 }
-
 .leftAside .topLeftAside a {
   color: #b5b2b2;
   font-weight: bold;
 }
-
 .leftAside .topLeftAside a:hover {
   color: white;
 }
-
 .leftAside .topLeftAside .flexedLi,
 .leftAside .topLeftAside a {
   display: flex;
   align-items: center;
 }
-
 .leftAside .topLeftAside .whiteLi:hover {
   color: white;
 }
-
 .leftAside .topLeftAside .whiteA {
   color: white;
 }
-
 .leftAside .topLeftAside i {
   font-size: 28px;
   margin-right: 1rem;
 }
-
 .leftAside .topLeftAside #search,
 .leftAside .topLeftAside #library {
   display: inline-block;
 }
-
 .leftAside .bottom-left-aside {
   overflow-y: scroll;
   height: 38%;
 }
-
 .leftAside .bottom-left-aside .playlist {
   cursor: pointer;
   font-weight: 500;
 }
-
 .leftAside .bottom-left-aside .playlist:hover {
   color: white;
 }
@@ -105,18 +92,18 @@ a {
   height: 25px;
 }
 
-input[type=text] {
+input[type="text"] {
   border: none;
   border-radius: 50px;
   color: #fff;
 }
 
-input[type=text]:focus {
-  outline: 4px solid #2ecc71;
-  /* oranges! yey */
+input[type="text"]:focus {
+  outline: 4px solid #2ecc71; /* oranges! yey */
 }
 
-input[type=text], textarea {
+input[type="text"],
+textarea {
   background-color: #343434;
 }
 
@@ -129,11 +116,23 @@ input[type=text], textarea {
 }
 
 .middle {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9814385151) 3%, rgb(29, 29, 29) 38%, rgb(47, 47, 47) 62%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9814385151) 3%,
+    rgb(29, 29, 29) 38%,
+    rgb(47, 47, 47) 62%,
+    rgb(0, 0, 0) 100%
+  );
+}
+
+bi-search {
+  position: absolute;
+  left: 261px;
+  top: 14px;
 }
 
 #card {
-  background-color: #101010;
+  background-color: #282828;
   width: 14vw;
   height: 40vh;
   color: white;
@@ -144,7 +143,7 @@ input[type=text], textarea {
   position: relative;
 }
 
-#card>img {
+#card > img {
   border-radius: 10px;
   width: 10vw;
 }
@@ -153,14 +152,14 @@ a {
   text-decoration: none;
 }
 
-#card>h5 {
+#card > h5 {
   position: absolute;
   top: 70%;
   font-size: 1rem;
   text-align: start;
 }
 
-#card>p {
+#card > p {
   position: absolute;
   top: 90%;
   font-size: 0.8rem;
@@ -182,9 +181,8 @@ a {
   0% {
     color: white;
   }
-
   100% {
-    background-color: #282828;
+    background-color: #101010;
     color: white;
   }
 }
@@ -193,13 +191,11 @@ a {
   0% {
     color: white;
   }
-
   100% {
-    background-color: #282828;
+    background-color: #101010;
     color: white;
   }
 }
-
 #card:hover {
   -webkit-animation: light;
   animation: light;
@@ -209,26 +205,23 @@ a {
 
 @-webkit-keyframes scale {
   0% {
-    color: #1CDF63;
+    color: #1cdf63;
   }
-
   100% {
     transform: scale(1.3);
-    color: #1CDF63;
+    color: #1cdf63;
   }
 }
 
 @keyframes scale {
   0% {
-    color: #1CDF63;
+    color: #1cdf63;
   }
-
   100% {
     transform: scale(1.3);
-    color: #1CDF63;
+    color: #1cdf63;
   }
 }
-
 #pulsante:hover {
   -webkit-animation: scale;
   animation: scale;
@@ -239,19 +232,26 @@ a {
 h2 {
   color: white;
   margin: 5%;
+  margin-left: 0%;
 }
 
-#cardLarge, #cardLarge1, #cardLarge2, #cardLarge3 {
+#cardLarge,
+#cardLarge1,
+#cardLarge2,
+#cardLarge3,
+#cardLarge4,
+#cardLarge5 {
   width: 24vw;
   height: 8vh;
   background-color: #282828;
   margin-bottom: 5%;
-
 }
 
-
-
-#cardHi, #cardHi1 {
+#cardHi,
+#cardHi1,
+#cardHi2,
+#cardHi3,
+#cardHi4 {
   width: 14vw;
   height: 40vh;
   background-color: #282828;
@@ -264,9 +264,9 @@ h2 {
   margin-bottom: 10%;
 }
 
-
-
-#placeholder {
+#placeholder,
+#placeholder1,
+#placeholder2 {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -286,7 +286,6 @@ h2 {
 
 #imgLong {
   height: 7vh;
-
 }
 
 #titleLong {
@@ -302,13 +301,13 @@ h2 {
 #imgTall {
   width: 100%;
   border-radius: 10px;
-
 }
 
 #titleTall {
   margin: 20%;
 }
 
+<<<<<<< HEAD
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -323,3 +322,6 @@ h2 {
 }
 
 /*# sourceMappingURL=app.css.map */
+=======
+/*# sourceMappingURL=app.css.map */
+>>>>>>> f7aea00768a4a7ff73c66d4d19f4a0fc6195c359
