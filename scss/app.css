@@ -5,6 +5,7 @@ body,
   width: 100%;
   margin: 0;
   padding: 0;
+  background: #181818 !important
 }
 
 body {
@@ -31,50 +32,63 @@ a {
   left: 0;
   padding: 0.5rem 1.3rem;
 }
+
 .leftAside .topLeftAside .secondUl {
   border-bottom: 0.5px solid rgba(181, 178, 178, 0.4196078431);
   padding: 30px 0 10px;
 }
+
 .leftAside .topLeftAside li {
   color: #b5b2b2;
 }
+
 .leftAside .topLeftAside li i:hover {
   color: white;
 }
+
 .leftAside .topLeftAside a {
   color: #b5b2b2;
   font-weight: bold;
 }
+
 .leftAside .topLeftAside a:hover {
   color: white;
 }
+
 .leftAside .topLeftAside .flexedLi,
 .leftAside .topLeftAside a {
   display: flex;
   align-items: center;
 }
+
 .leftAside .topLeftAside .whiteLi:hover {
   color: white;
 }
+
 .leftAside .topLeftAside .whiteA {
   color: white;
 }
+
 .leftAside .topLeftAside i {
   font-size: 28px;
   margin-right: 1rem;
 }
+
 .leftAside .topLeftAside #search,
 .leftAside .topLeftAside #library {
   display: inline-block;
 }
+
 .leftAside .bottom-left-aside {
   overflow-y: scroll;
   height: 50%;
 }
+
 .leftAside .bottom-left-aside .playlist {
   cursor: pointer;
   font-weight: 500;
 }
+
 .leftAside .bottom-left-aside .playlist:hover {
   color: white;
 }
@@ -99,7 +113,8 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  outline: 4px solid #2ecc71; /* oranges! yey */
+  outline: 4px solid #2ecc71;
+  /* oranges! yey */
 }
 
 input[type=text], textarea {
@@ -112,4 +127,99 @@ input[type=text], textarea {
   position: absolute;
   right: 260px;
   background-color: #2ecc71;
-}/*# sourceMappingURL=app.css.map */
+}
+
+/*# sourceMappingURL=app.css.map */
+
+
+
+
+
+
+
+
+
+
+
+
+
+#card {
+  background-color: #101010;
+  width: 14vw;
+  height: 40vh;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10%;
+  margin: 5%;
+  position: relative;
+}
+
+#card>img {
+  border-radius: 10px;
+  width: 10vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+#card>h5 {
+  position: absolute;
+  top: 70%;
+  font-size: 1rem;
+  text-align: start;
+}
+
+#card>p {
+  position: absolute;
+  top: 90%;
+  font-size: 0.8rem;
+  text-align: start;
+  color: gray;
+}
+
+#pulsante {
+  position: absolute;
+  top: -65%;
+
+  left: 65%;
+  color: transparent;
+  background-color: transparent;
+  border: transparent;
+  font-size: 50px !important;
+}
+
+@keyframes light {
+  0% {
+    color: white;
+  }
+
+  100% {
+    background-color: #282828;
+    color: white;
+  }
+}
+
+#card:hover {
+  animation: light;
+  animation-duration: 3s;
+
+}
+
+@keyframes scale {
+  0% {
+    color: #1CDF63;
+  }
+
+  100% {
+    transform: scale(1.3);
+    color: #1CDF63;
+  }
+}
+
+#pulsante:hover {
+  animation: scale;
+  animation-duration: 3s;
+
+}
