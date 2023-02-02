@@ -44,11 +44,10 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
   return `
   <div class="classCont col-12 col-md-3 text-light">
   <div id="card">
-      <img src="${artistPicture}" alt="Card_image">
+      <img src="${artistPicture}" onclick='bringToAlbumPage("${albumtitle}","${albumId}")' alt="Card_image">
       <i id="pulsante" onclick='playMusic("${track}", "${songTitle}", "${artistName}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
-          <h5>${songTitle}</h5>
-          <h5 onclick='bringToAlbumPage("${albumtitle}","${albumId}")'>${albumtitle}  </h5>
-      <p onclick='bringToArtistPage("${artistName}","${artistid}")'>${artistName} </p>
+        <h5>${songTitle}</h5>
+        <p onclick='bringToArtistPage("${artistName}","${artistid}")'>${artistName}</p>
   </div>
 </div>
   `
