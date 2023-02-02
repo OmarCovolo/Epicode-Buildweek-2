@@ -77,7 +77,7 @@ function albumNews(albumCover, artistName, albumtitle, track, artistid, albumId,
         <div class="d-flex">
           <button class="bi play text-white mx-2 fs-5 rounded-5 bg-dark text-center border-1">Salva</button>
           <button onclick='playMusic("${track}", "${title}", "${artistName}")' class="bi play text-white mx-2 fs-4 rounded-5 bg-success text-center ">Play</button>
-        </div>
+          </div>
       </div>
   </div>
   `
