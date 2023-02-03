@@ -389,4 +389,22 @@ h2 {
   animation-duration: 3s;
 }
 
+@media only screen and (max-width: 900px) {
+  .leftAside {
+    display: none;
+    width: 0;
+  }
+
+  .rightAside {
+    display: none;
+    width: 0;
+  }
+
+  .middle {
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
 /*# sourceMappingURL=app.css.map */
