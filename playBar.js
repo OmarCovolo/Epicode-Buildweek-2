@@ -69,10 +69,10 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
 function albumNews(albumCover, artistName, albumtitle, track, artistid, albumId, i, title) {
     console.log("ddd", track );
     return `
-  <div class="newsCont col-12 col-md-3 text-light d-flex m-5 w-75">
+  <div class="newsCont col-12 col-md-3 text-light d-flex m-5 w-100">
       <img class="m-3" src="${albumCover}" onclick='bringToAlbumPage("${albumtitle}","${albumId}")' alt="Card_image"/>
       <div class="d-flex flex-column ms-3 w-100">
-        <div class="d-flex justify-content-between"><h6>Album</h6><h6 class="border rounded-5 p-1 bg-secondary-transparent">nascondi sezione</h6></div>
+        <div class="d-flex justify-content-between"><h6>Album</h6><h6 class="border rounded-5 p-1 bg-secondary-transparent" style="margin-right:70px">nascondi sezione</h6></div>
         <h1>${albumtitle}</h1>
         <p onclick='bringToArtistPage("${artistName}","${artistid}")'>${artistName}</p>
         <p>Ascolta il nuovo singolo di ${artistName}</p>
