@@ -31,63 +31,50 @@ a {
   left: 0;
   padding: 0.5rem 1.3rem;
 }
-
 .leftAside .topLeftAside .secondUl {
   border-bottom: 0.5px solid rgba(181, 178, 178, 0.4196078431);
   padding: 30px 0 10px;
 }
-
 .leftAside .topLeftAside li {
   color: #b5b2b2;
 }
-
 .leftAside .topLeftAside li i:hover {
   color: white;
 }
-
 .leftAside .topLeftAside a {
   color: #b5b2b2;
   font-weight: bold;
 }
-
 .leftAside .topLeftAside a:hover {
   color: white;
 }
-
 .leftAside .topLeftAside .flexedLi,
 .leftAside .topLeftAside a {
   display: flex;
   align-items: center;
 }
-
 .leftAside .topLeftAside .whiteLi:hover {
   color: white;
 }
-
 .leftAside .topLeftAside .whiteA {
   color: white;
 }
-
 .leftAside .topLeftAside i {
   font-size: 28px;
   margin-right: 1rem;
 }
-
 .leftAside .topLeftAside #search,
 .leftAside .topLeftAside #library {
   display: inline-block;
 }
-
 .leftAside .bottom-left-aside {
   overflow-y: scroll;
-  height: 38%;
+  height: 50%;
 }
-
 .leftAside .bottom-left-aside .playlist {
   cursor: pointer;
   font-weight: 500;
 }
-
 .leftAside .bottom-left-aside .playlist:hover {
   color: white;
 }
@@ -112,8 +99,7 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  outline: 4px solid #2ecc71;
-  /* oranges! yey */
+  outline: 4px solid #2ecc71; /* oranges! yey */
 }
 
 input[type=text], textarea {
@@ -126,6 +112,26 @@ input[type=text], textarea {
   position: absolute;
   right: 260px;
   background-color: #2ecc71;
+}
+
+#form1 {
+  height: 35px;
+  width: 350px;
+  background-color: white;
+  text-indent: 20px;
+  position: relative;
+}
+
+#searchIcon {
+  position: absolute;
+  top: 14px;
+  left: 260px;
+}
+
+.searchButt {
+  position: relative;
+  top: 0;
+  right: 70px;
 }
 
 .middle {
@@ -144,7 +150,7 @@ input[type=text], textarea {
   position: relative;
 }
 
-#card>img {
+#card > img {
   border-radius: 10px;
   width: 10vw;
 }
@@ -153,14 +159,14 @@ a {
   text-decoration: none;
 }
 
-#card>h5 {
+#card > h5 {
   position: absolute;
   top: 70%;
   font-size: 1rem;
   text-align: start;
 }
 
-#card>p {
+#card > p {
   position: absolute;
   top: 90%;
   font-size: 0.8rem;
@@ -182,7 +188,6 @@ a {
   0% {
     color: white;
   }
-
   100% {
     background-color: #282828;
     color: white;
@@ -193,25 +198,22 @@ a {
   0% {
     color: white;
   }
-
   100% {
     background-color: #282828;
     color: white;
   }
 }
-
 #card:hover {
   -webkit-animation: light;
-  animation: light;
+          animation: light;
   -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 @-webkit-keyframes scale {
   0% {
     color: #1CDF63;
   }
-
   100% {
     transform: scale(1.3);
     color: #1CDF63;
@@ -222,104 +224,14 @@ a {
   0% {
     color: #1CDF63;
   }
-
   100% {
     transform: scale(1.3);
     color: #1CDF63;
   }
 }
-
 #pulsante:hover {
   -webkit-animation: scale;
-  animation: scale;
+          animation: scale;
   -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-}
-
-h2 {
-  color: white;
-  margin: 5%;
-}
-
-#cardLarge, #cardLarge1, #cardLarge2, #cardLarge3 {
-  width: 24vw;
-  height: 8vh;
-  background-color: #282828;
-  margin-bottom: 5%;
-
-}
-
-
-
-#cardHi, #cardHi1 {
-  width: 14vw;
-  height: 40vh;
-  background-color: #282828;
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  margin: 5%;
-  position: relative;
-  padding: 1vw;
-  margin-bottom: 10%;
-}
-
-
-
-#placeholder {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-#cardcontainer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-#cardLong {
-  display: flex;
-  padding: 1%;
-}
-
-#imgLong {
-  height: 7vh;
-
-}
-
-#titleLong {
-  font-size: 1rem;
-  margin: 2%;
-}
-
-#cardTall {
-  display: flex;
-  flex-direction: column;
-}
-
-#imgTall {
-  width: 100%;
-  border-radius: 10px;
-
-}
-
-#titleTall {
-  margin: 20%;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #888686;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(190, 185, 185);
-}
-::-webkit-scrollbar-thumb:active {
-  background-color: rgb(238, 231, 231);
-}
-
-/*# sourceMappingURL=app.css.map */
+          animation-duration: 3s;
+}/*# sourceMappingURL=app.css.map */

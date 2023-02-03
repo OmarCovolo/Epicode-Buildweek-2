@@ -3,6 +3,84 @@
   margin-right: 250px;
 }
 
+@media screen and (max-width: 900px) {
+  .songContainer > div:first-child {
+    margin: 50px 0px 30px 20px;
+  }
+  .songContainer > div:first-child button {
+    display: none;
+  }
+  .leftAside {
+    display: none;
+  }
+  .rightAside {
+    display: none;
+  }
+  .mainContainer {
+    margin: 0;
+    width: 100%;
+  }
+  html {
+    font-size: 13px;
+  }
+  .account {
+    display: none !important;
+  }
+  .artistContainer h5 {
+    position: absolute;
+    bottom: 610px;
+    color: #969696;
+  }
+  .bi-three-dots {
+    transform: rotate(90deg);
+  }
+  .popolari {
+    display: none !important;
+  }
+  .lastDiv {
+    flex-flow: column-reverse;
+    margin-left: 20px;
+    width: 100%;
+  }
+  .infoSong {
+    margin: 10px !important;
+    width: 100% !important;
+  }
+  .infoSong > h5 {
+    display: none !important;
+  }
+  .songList button {
+    position: absolute;
+    left: 38px;
+  }
+  .innerSongContainer {
+    margin: 0 !important;
+  }
+  .playbar {
+    width: 350px !important;
+    border-radius: 20px;
+    bottom: 20px !important;
+    left: 15% !important;
+  }
+  .playbar .navButtVol {
+    display: none !important;
+  }
+  .progressBar {
+    display: none !important;
+  }
+  .bi-shuffle {
+    display: none;
+  }
+  .bi-skip-start-fill {
+    display: none;
+  }
+  .bi-skip-end-fill {
+    display: none;
+  }
+  .bi-repeat {
+    display: none;
+  }
+}
 .leftAside {
   width: 250px;
   background-color: black;
@@ -232,7 +310,7 @@
 }
 
 .likedSongss {
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 .likedSongss img {
   overflow: hidden;
@@ -256,10 +334,18 @@
 
 .songList {
   transition: 0.5s;
+  position: relative;
+}
+.songList button {
+  position: absolute;
+  left: 0px;
 }
 
 .songList:hover {
   background-color: rgba(85, 85, 85, 0.509);
+}
+.songList:hover p {
+  display: none;
 }
 .songList:hover .musicPlayButton {
   visibility: visible;
