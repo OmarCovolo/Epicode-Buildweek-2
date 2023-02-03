@@ -33,6 +33,7 @@ const songSearch = (input) => {
         data[0].album.title,
         data[0].preview,
         data[0].album.id,
+        data[0].artist.id,
         data[0].title_short,
       )
       data.forEach((element, i) => {
@@ -66,7 +67,7 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
   `
 }
 
-function albumNews(albumCover, artistName, albumtitle, track, artistid, albumId, i, title) {
+function albumNews(albumCover, artistName, albumtitle, track, albumId , artistid, title) {
     console.log("ddd", track );
     return `
   <div class="newsCont col-12 col-md-3 text-light d-flex m-5 w-100">
