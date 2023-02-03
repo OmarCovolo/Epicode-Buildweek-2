@@ -368,7 +368,7 @@ const cardHi = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -410,7 +410,7 @@ const cardHi1 = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -452,7 +452,7 @@ const cardHi2 = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
 
           </div>
@@ -495,7 +495,7 @@ const cardHi3 = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
 
           </div>
@@ -538,7 +538,7 @@ const cardHi4 = async function () {
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
 
           </div>
