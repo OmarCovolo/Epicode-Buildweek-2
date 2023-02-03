@@ -66,7 +66,7 @@ function containerAlbum(songTitle, albumCover, artistName, albumtitle, artistPic
   `
 }
 
-function albumNews(albumCover, artistName, albumtitle, track, artistid, albumId, i, title) {
+function albumNews(albumCover, artistName, albumtitle, track, albumId , artistid, i, title) {
     console.log("ddd", track );
     return `
   <div class="newsCont col-12 col-md-3 text-light d-flex m-5 w-100">
