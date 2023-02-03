@@ -153,7 +153,7 @@ input[type=text], textarea {
 }
 
 #card {
-  background-color: #101010;
+  background-color: #282828;
   width: 14vw;
   height: 40vh;
   color: white;
@@ -204,7 +204,7 @@ a {
   }
 
   100% {
-    background-color: #282828;
+    background-color: #101010;
     color: white;
   }
 }
@@ -215,7 +215,7 @@ a {
   }
 
   100% {
-    background-color: #282828;
+    background-color: #101010;
     color: white;
   }
 }
@@ -270,13 +270,14 @@ h2 {
   background-color: #282828;
   margin-bottom: 1%;
   position: relative;
+  color: white;
 }
 
 
 
 #cardHi, #cardHi1, #cardHi2, #cardHi3, #cardHi4 {
-  width: 14vw;
-  height: 45vh;
+  width: 11vw;
+  height: 38vh;
   background-color: #282828;
   color: white;
   border-radius: 10px;
@@ -332,7 +333,15 @@ h2 {
 }
 
 #titleTall {
-  margin: 20%;
+  margin-top: 15%;
+  font-size: 15px;
+}
+
+#cardTall>p {
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  text-align: start;
 }
 
 #pulsantelong {
@@ -340,14 +349,16 @@ h2 {
   position: absolute;
   left: 80%;
   font-size: 50px !important;
+
 }
 
 #pulsantehi {
   color: transparent;
   position: absolute;
-  top: 40%;
-  left: 70%;
+  top: 28%;
+  left: 55%;
   font-size: 50px !important;
+  z-index: 1
 }
 
 #pulsantelong:hover {
