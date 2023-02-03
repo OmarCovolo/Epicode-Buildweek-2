@@ -103,14 +103,14 @@ const cardLarge = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardLong">
   
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
               </div>
-              <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -146,14 +146,14 @@ const cardLarge1 = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardLong">
   
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
                   </div>
-                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+                  <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -190,14 +190,14 @@ const cardLarge2 = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardLong">
   
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
                   </div>
-                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+                  <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -234,14 +234,14 @@ const cardLarge3 = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardLong">
   
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
                   </div>
-                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+                  <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -276,14 +276,14 @@ const cardLarge4 = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardLong">
   
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
                   </div>
-                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+                  <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -318,14 +318,14 @@ const cardLarge5 = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardLong">
   
               <img id="imgLong" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleLong">${card.title}</h5>
                   </div>
-                  <i id="pulsantelong" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+                  <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -361,14 +361,14 @@ const cardHi = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -403,14 +403,14 @@ const cardHi1 = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
       </a>
@@ -445,14 +445,14 @@ const cardHi2 = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
 
           </div>
@@ -488,14 +488,14 @@ const cardHi3 = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
 
           </div>
@@ -531,14 +531,14 @@ const cardHi4 = async function () {
 
      `
      
-     <div class="col"><a href="${card.link}">
+     <div class="col"><a>
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
               <div>
                   <h5 id="titleTall">${card.title}</h5>
               </div>
-              <i id="pulsantehi" onclick='playMusic("${card.preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+              <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
 
           </div>
