@@ -111,7 +111,7 @@ const cardLarge = async function () {
                   <h5 id="titleLong">${card.title}</h5>
               </div>
               <i id="pulsantelong" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
-
+              
           </div>
       </a>
       </div>
@@ -365,9 +365,10 @@ const cardHi = async function () {
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
-              <div>
+           
                   <h5 id="titleTall">${card.title}</h5>
-              </div>
+            
+              <p> ${card.artist.name},${card.tracks.data[0].album.title}</p>
               <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
@@ -407,9 +408,10 @@ const cardHi1 = async function () {
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
-              <div>
+             
                   <h5 id="titleTall">${card.title}</h5>
-              </div>
+              
+              <p> ${card.artist.name},${card.tracks.data[0].album.title}</p>
               <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
           </div>
@@ -449,9 +451,10 @@ const cardHi2 = async function () {
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
-              <div>
+              
                   <h5 id="titleTall">${card.title}</h5>
-              </div>
+             
+              <p> ${card.artist.name},${card.tracks.data[0].album.title}</p>
               <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
 
@@ -492,9 +495,10 @@ const cardHi3 = async function () {
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
-              <div>
+              
                   <h5 id="titleTall">${card.title}</h5>
-              </div>
+              
+              <p> ${card.artist.name},${card.tracks.data[0].album.title}</p>
               <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
 
@@ -535,9 +539,10 @@ const cardHi4 = async function () {
           <div id="cardTall">
   
               <img id="imgTall" src="${card.artist.picture}" alt="Card_image">
-              <div>
+            
                   <h5 id="titleTall">${card.title}</h5>
-              </div>
+              
+              <p> ${card.artist.name},${card.tracks.data[0].album.title}</p>
               <i id="pulsantehi" onclick='playMusic("${card.tracks.data[0].preview}", "${card.title}", "${card.artist.name}")' class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
 
 

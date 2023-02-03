@@ -378,4 +378,17 @@ h2 {
   animation-duration: 3s;
 }
 
+#cardTall>h5 {
+  text-align: start;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+#cardTall>p {
+  text-align: start;
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
 /*# sourceMappingURL=app.css.map */
